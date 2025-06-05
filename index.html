@@ -1,995 +1,122 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kener Cotrina | Desarrollador WordPress</title>
-    <script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#e6ffee',
-                            100: '#b3ffcb',
-                            200: '#80ffa8',
-                            300: '#4dff85',
-                            400: '#1aff62',
-                            500: '#00e64d',
-                            600: '#00b33c',
-                            700: '#00802b',
-                            800: '#004d1a',
-                            900: '#001a09',
-                        },
-                        secondary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        },
-                        dark: '#0f172a',
-                    },
-                    fontFamily: {
-                        'poppins': ['Poppins', 'sans-serif'],
-                        'space': ['Space Grotesk', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(90deg, #00e64d 0%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero-bg {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 230, 77, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
-            z-index: -1;
-        }
-        
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.4;
-            animation: blob-animation 15s infinite alternate;
-            z-index: -1;
-        }
-        
-        @keyframes blob-animation {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-            33% {
-                transform: translate(30px, -50px) scale(1.1);
-            }
-            66% {
-                transform: translate(-20px, 20px) scale(0.9);
-            }
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-10px);
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background: linear-gradient(90deg, #00e64d 0%, #38bdf8 100%);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .active::after {
-            width: 100%;
-        }
-        
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        
-        .service-card {
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 230, 77, 0.3);
-        }
-        
-        .portfolio-item {
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-        
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-            transition: transform 0.5s ease;
-        }
-        
-        .contact-input {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-input:focus {
-            border-color: #00e64d;
-            box-shadow: 0 0 0 3px rgba(0, 230, 77, 0.3);
-        }
-        
-        /* Animación para el scroll */
-        .reveal {
-            position: relative;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <title>KCMSMART| Desarrollo sitios webs, landing pages, tienda online y blogs</title>
+    <link rel="stylesheet" href="/output.css">
+    <script src="https://kit.fontawesome.com/8c2f1b82d6.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-gray-950 text-gray-200">
-    <!-- Header -->
-    <header class="fixed w-full z-50 bg-gray-950/80 backdrop-blur-md border-b border-gray-800">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_verde-XOG7vWisiY45bWbLBEvBfG7I1VHAhh.png" alt="Kener Cotrina Logo" class="h-10">
-                <span class="text-xl font-bold font-space text-white">Kener<span class="text-primary-400">Cotrina</span></span>
-            </a>
-            
-            <div class="hidden md:flex space-x-8">
-                <a href="#inicio" class="nav-link active text-white hover:text-primary-400 transition-colors">Inicio</a>
-                <a href="#sobre-mi" class="nav-link text-gray-300 hover:text-primary-400 transition-colors">Sobre Mí</a>
-                <a href="#servicios" class="nav-link text-gray-300 hover:text-primary-400 transition-colors">Servicios</a>
-                <a href="#portafolio" class="nav-link text-gray-300 hover:text-primary-400 transition-colors">Portafolio</a>
-                <a href="#contacto" class="nav-link text-gray-300 hover:text-primary-400 transition-colors">Contacto</a>
+<body>
+    <header class="w-full bg-[#18F29B]">
+        <nav class="w-full flex justify-between items-center lg:justify-center">
+            <div class="flex justify-between lg:w-[1084px]  lg:bg-black lg:justify-evenly items-center gap-24 p-4  rounded-bl-3xl rounded-br-3xl">
+                <a class="flex lg:hidden" href="/index.html"><img src="/assets/images/logo_negro.png" width="45px" alt="logo kcm smart"rounded-bl-3xl rounded-br-3xl></a>
+                <a class="hidden lg:flex" href="/index.html"><img src="/assets/images/logo_blanco.png" width="45px" alt="logo kcm smart"></a>
+                <ul class="hidden  gap-12 text-white font-Monserrat font-medium text-[1.125em] lg:flex">
+                    <li><a href="#Sobremi">SOBRE MI</a></li>
+                    <li><a href="#Servicios">SERVICIO</a></li>
+                    <li><a href="#Portafolio">PORTAFOLIO</a></li>
+                    <li><a href="#Contacto">CONTACTO</a></li>
+                </ul>
             </div>
-            
-            <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-gray-900 border-b border-gray-800" id="mobile-menu">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="#inicio" class="text-white hover:text-primary-400 transition-colors py-2">Inicio</a>
-                <a href="#sobre-mi" class="text-gray-300 hover:text-primary-400 transition-colors py-2">Sobre Mí</a>
-                <a href="#servicios" class="text-gray-300 hover:text-primary-400 transition-colors py-2">Servicios</a>
-                <a href="#portafolio" class="text-gray-300 hover:text-primary-400 transition-colors py-2">Portafolio</a>
-                <a href="#contacto" class="text-gray-300 hover:text-primary-400 transition-colors py-2">Contacto</a>
-            </div>
-        </div>
+        </nav>
     </header>
+    <main>
+        <div class="w-full bg-black">
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="blob bg-primary-500" style="width: 300px; height: 300px; top: 20%; left: 10%;"></div>
-        <div class="blob bg-secondary-500" style="width: 250px; height: 250px; bottom: 10%; right: 15%;"></div>
-        <div class="particles" id="particles-js"></div>
-        
-        <div class="container mx-auto px-4 py-20 relative z-10">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="md:w-1/2 mb-10 md:mb-0 reveal">
-                    <h2 class="text-primary-400 font-semibold text-lg mb-3 font-space">¡Bienvenido a mi portafolio!</h2>
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                        Desarrollo <span class="gradient-text">WordPress</span> creativo y funcional
+            <section class="w-full h-screen bg-[#18F29B] flex flex-col lg:flex-row rounded-bl-3xl rounded-br-3xl">
+                <div class="w-full flex flex-col justify-center items-start text-start p-5 lg:px-32 mt-15 lg:mt-0">
+                    <h1 class="font-Boldonse text-2xl lg:text-[1.25em] ">DISEÑO <br><br>
+                        <span class="text-4xl lg:text-6xl text-white">PÁGINAS WEBS</span>
                     </h1>
-                    <p class="text-gray-400 text-lg mb-8 max-w-lg">
+                    <h2 class="w-full font-Monserrat text-[1.2em] lg:text-[1.5em] mt-8 text-justify">
                         Transformo ideas en experiencias web únicas y personalizadas que destacan en el mundo digital.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contacto" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-primary-500/20 transition-all transform hover:-translate-y-1">
-                            Contáctame
-                        </a>
-                        <a href="#portafolio" class="px-8 py-3 bg-transparent border border-gray-700 text-white font-medium rounded-full hover:border-primary-500 hover:text-primary-400 transition-all transform hover:-translate-y-1">
-                            Ver Proyectos
-                        </a>
-                    </div>
-                    
-                    <div class="mt-12 flex items-center space-x-6">
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-github text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-linkedin text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-twitter text-2xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-instagram text-2xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="md:w-1/2 flex justify-center reveal">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-                        <div class="relative bg-gray-900 p-2 rounded-2xl border border-gray-800 shadow-xl animate-float">
-                            <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=WordPress+Developer" alt="WordPress Development" class="rounded-xl">
-                            <div class="absolute -bottom-5 -right-5 bg-gray-900 p-3 rounded-xl border border-gray-800">
-                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_verde-XOG7vWisiY45bWbLBEvBfG7I1VHAhh.png" alt="Kener Cotrina Logo" class="h-10 w-10">
-                            </div>
-                        </div>
-                        
-                        <div class="absolute -top-10 -left-10 bg-gray-900 px-4 py-2 rounded-xl border border-gray-800 shadow-lg">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 bg-primary-500 rounded-full animate-pulse"></div>
-                                <span class="text-sm font-medium">WordPress</span>
-                            </div>
-                        </div>
-                        
-                        <div class="absolute -bottom-10 left-10 bg-gray-900 px-4 py-2 rounded-xl border border-gray-800 shadow-lg">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-3 h-3 bg-secondary-500 rounded-full animate-pulse"></div>
-                                <span class="text-sm font-medium">Diseño Web</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <a href="#sobre-mi" class="text-gray-400 hover:text-primary-400 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre Mi Section -->
-    <section id="sobre-mi" class="py-20 relative">
-        <div class="blob bg-primary-500/20" style="width: 400px; height: 400px; top: 10%; right: 5%;"></div>
-        
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre <span class="gradient-text">Mí</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto"></div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-2/5 reveal">
-                    <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-2xl blur-3xl"></div>
-                        <img src="https://placehold.co/600x800/1a1a2e/ffffff?text=Kener+Cotrina" alt="Kener Cotrina" class="relative rounded-2xl border border-gray-800 shadow-xl">
-                        <div class="absolute -bottom-5 -right-5 bg-gray-900 p-4 rounded-xl border border-gray-800 shadow-lg">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-3 h-3 bg-primary-500 rounded-full"></div>
-                                <span class="font-medium">Disponible para proyectos</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="md:w-3/5 reveal">
-                    <h3 class="text-2xl font-bold mb-6 gradient-text">¡Hola, soy Kener Cotrina!</h3>
-                    <p class="text-gray-400 mb-6 text-lg">
-                        Desarrollador web con un año de experiencia y actualmente en proceso de aprender desarrollo de aplicaciones móviles. Soy originario de Lima, Perú y me especializo en la creación de landing pages únicas y personalizadas para ofrecer una experiencia web excepcional.
-                    </p>
-                    
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold mb-4 text-primary-400">Educación</h4>
-                        <div class="space-y-6">
-                            <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h5 class="font-bold text-white">ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES</h5>
-                                        <p class="text-gray-400">ZEGEL IPAE</p>
-                                    </div>
-                                    <span class="text-gray-500">2019-2023</span>
-                                </div>
-                                <div class="mt-2">
-                                    <span class="px-3 py-1 bg-primary-500/10 text-primary-400 rounded-full text-sm">Técnico</span>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h5 class="font-bold text-white">HTML+CSS+JS</h5>
-                                        <p class="text-gray-400">ENTER TECH SCHOOL</p>
-                                    </div>
-                                    <span class="text-gray-500">2024-2025</span>
-                                </div>
-                                <div class="mt-2">
-                                    <span class="px-3 py-1 bg-primary-500/10 text-primary-400 rounded-full text-sm">Curso</span>
-                                </div>
-                            </div>
-                            
-                            <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h5 class="font-bold text-white">JAVASCRIPT TOTAL</h5>
-                                        <p class="text-gray-400">UDEMY</p>
-                                    </div>
-                                    <span class="text-gray-500">2024</span>
-                                </div>
-                                <div class="mt-2">
-                                    <span class="px-3 py-1 bg-primary-500/10 text-primary-400 rounded-full text-sm">Curso</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-800 text-center">
-                            <div class="text-3xl font-bold gradient-text mb-2">1+</div>
-                            <div class="text-gray-400 text-sm">Años de Experiencia</div>
-                        </div>
-                        <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-800 text-center">
-                            <div class="text-3xl font-bold gradient-text mb-2">10+</div>
-                            <div class="text-gray-400 text-sm">Proyectos Completados</div>
-                        </div>
-                        <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-800 text-center">
-                            <div class="text-3xl font-bold gradient-text mb-2">5+</div>
-                            <div class="text-gray-400 text-sm">Clientes Satisfechos</div>
-                        </div>
-                        <div class="bg-gray-900/50 p-4 rounded-xl border border-gray-800 text-center">
-                            <div class="text-3xl font-bold gradient-text mb-2">3+</div>
-                            <div class="text-gray-400 text-sm">Certificaciones</div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-gray-900 rounded-full border border-gray-800 text-sm">WordPress</span>
-                        <span class="px-4 py-2 bg-gray-900 rounded-full border border-gray-800 text-sm">HTML5</span>
-                        <span class="px-4 py-2 bg-gray-900 rounded-full border border-gray-800 text-sm">CSS3</span>
-                        <span class="px-4 py-2 bg-gray-900 rounded-full border border-gray-800 text-sm">JavaScript</span>
-                        <span class="px-4 py-2 bg-gray-900 rounded-full border border-gray-800 text-sm">PHP</span>
-                        <span class="px-4 py-2 bg-gray-900 rounded-full border border-gray-800 text-sm">Responsive Design</span>
-                        <span class="px-4 py-2 bg-gray-900 rounded-full border border-gray-800 text-sm">UI/UX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios Section -->
-    <section id="servicios" class="py-20 bg-gray-950 relative">
-        <div class="blob bg-secondary-500/20" style="width: 350px; height: 350px; bottom: 10%; left: 5%;"></div>
-        
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Mis <span class="gradient-text">Servicios</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-2xl mx-auto">Ofrezco soluciones web personalizadas para ayudarte a destacar en el mundo digital con un enfoque en WordPress.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="service-card p-8 rounded-2xl reveal">
-                    <div class="w-16 h-16 bg-primary-500/20 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-laptop-code text-2xl text-primary-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Desarrollo WordPress</h3>
-                    <p class="text-gray-400 mb-6">Creación de sitios web profesionales y personalizados utilizando WordPress, optimizados para velocidad y SEO.</p>
-                    <a href="#contacto" class="text-primary-400 hover:text-primary-500 flex items-center">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="service-card p-8 rounded-2xl reveal">
-                    <div class="w-16 h-16 bg-primary-500/20 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-paint-brush text-2xl text-primary-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Diseño de Landing Pages</h3>
-                    <p class="text-gray-400 mb-6">Diseño de páginas de aterrizaje atractivas y efectivas que convierten visitantes en clientes.</p>
-                    <a href="#contacto" class="text-primary-400 hover:text-primary-500 flex items-center">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="service-card p-8 rounded-2xl reveal">
-                    <div class="w-16 h-16 bg-primary-500/20 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt text-2xl text-primary-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Diseño Responsive</h3>
-                    <p class="text-gray-400 mb-6">Creación de sitios web que se adaptan perfectamente a todos los dispositivos, desde móviles hasta escritorio.</p>
-                    <a href="#contacto" class="text-primary-400 hover:text-primary-500 flex items-center">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="service-card p-8 rounded-2xl reveal">
-                    <div class="w-16 h-16 bg-primary-500/20 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-search text-2xl text-primary-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Optimización SEO</h3>
-                    <p class="text-gray-400 mb-6">Mejora del posicionamiento de tu sitio web en los motores de búsqueda para aumentar la visibilidad.</p>
-                    <a href="#contacto" class="text-primary-400 hover:text-primary-500 flex items-center">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="service-card p-8 rounded-2xl reveal">
-                    <div class="w-16 h-16 bg-primary-500/20 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-cogs text-2xl text-primary-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Mantenimiento Web</h3>
-                    <p class="text-gray-400 mb-6">Servicio de mantenimiento y actualización de sitios WordPress para garantizar su seguridad y rendimiento.</p>
-                    <a href="#contacto" class="text-primary-400 hover:text-primary-500 flex items-center">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="service-card p-8 rounded-2xl reveal">
-                    <div class="w-16 h-16 bg-primary-500/20 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-shopping-cart text-2xl text-primary-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">E-commerce WordPress</h3>
-                    <p class="text-gray-400 mb-6">Desarrollo de tiendas online con WooCommerce, personalizadas y optimizadas para aumentar las ventas.</p>
-                    <a href="#contacto" class="text-primary-400 hover:text-primary-500 flex items-center">
-                        <span>Saber más</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="mt-16 text-center reveal">
-                <a href="#contacto" class="px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium rounded-full hover:shadow-lg hover:shadow-primary-500/20 transition-all transform hover:-translate-y-1 inline-block">
-                    Solicitar Servicio
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portafolio Section -->
-    <section id="portafolio" class="py-20 relative">
-        <div class="blob bg-primary-500/20" style="width: 300px; height: 300px; top: 20%; right: 10%;"></div>
-        
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Mi <span class="gradient-text">Portafolio</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-2xl mx-auto">Explora algunos de mis proyectos más recientes y descubre cómo puedo ayudarte a crear tu presencia online.</p>
-            </div>
-            
-            <div class="flex justify-center mb-10 reveal">
-                <div class="flex flex-wrap gap-4 justify-center">
-                    <button class="portfolio-filter active px-6 py-2 bg-gray-900 rounded-full border border-gray-800 hover:border-primary-500 hover:text-primary-400 transition-all">Todos</button>
-                    <button class="portfolio-filter px-6 py-2 bg-gray-900 rounded-full border border-gray-800 hover:border-primary-500 hover:text-primary-400 transition-all">WordPress</button>
-                    <button class="portfolio-filter px-6 py-2 bg-gray-900 rounded-full border border-gray-800 hover:border-primary-500 hover:text-primary-400 transition-all">Landing Pages</button>
-                    <button class="portfolio-filter px-6 py-2 bg-gray-900 rounded-full border border-gray-800 hover:border-primary-500 hover:text-primary-400 transition-all">E-commerce</button>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="portfolio-item rounded-xl overflow-hidden reveal">
-                    <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=Proyecto+1" alt="Proyecto 1" class="w-full h-64 object-cover">
-                    <div class="portfolio-overlay p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Sitio Web Corporativo</h3>
-                        <p class="text-gray-300 mb-4">Diseño y desarrollo de sitio web para empresa de tecnología</p>
-                        <a href="#" class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item rounded-xl overflow-hidden reveal">
-                    <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=Proyecto+2" alt="Proyecto 2" class="w-full h-64 object-cover">
-                    <div class="portfolio-overlay p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">E-commerce de Moda</h3>
-                        <p class="text-gray-300 mb-4">Tienda online con WooCommerce para marca de ropa</p>
-                        <a href="#" class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item rounded-xl overflow-hidden reveal">
-                    <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=Proyecto+3" alt="Proyecto 3" class="w-full h-64 object-cover">
-                    <div class="portfolio-overlay p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Landing Page Producto</h3>
-                        <p class="text-gray-300 mb-4">Página de aterrizaje para lanzamiento de producto digital</p>
-                        <a href="#" class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item rounded-xl overflow-hidden reveal">
-                    <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=Proyecto+4" alt="Proyecto 4" class="w-full h-64 object-cover">
-                    <div class="portfolio-overlay p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Blog Personal</h3>
-                        <p class="text-gray-300 mb-4">Diseño y desarrollo de blog para escritor</p>
-                        <a href="#" class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item rounded-xl overflow-hidden reveal">
-                    <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=Proyecto+5" alt="Proyecto 5" class="w-full h-64 object-cover">
-                    <div class="portfolio-overlay p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Sitio Web Restaurante</h3>
-                        <p class="text-gray-300 mb-4">Diseño y desarrollo de sitio web para restaurante local</p>
-                        <a href="#" class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item rounded-xl overflow-hidden reveal">
-                    <img src="https://placehold.co/600x400/1a1a2e/ffffff?text=Proyecto+6" alt="Proyecto 6" class="w-full h-64 object-cover">
-                    <div class="portfolio-overlay p-6">
-                        <h3 class="text-xl font-bold mb-2 text-white">Sitio Web Educativo</h3>
-                        <p class="text-gray-300 mb-4">Plataforma educativa para academia online</p>
-                        <a href="#" class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-colors">Ver Detalles</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-16 text-center reveal">
-                <a href="#" class="px-8 py-3 bg-transparent border border-gray-700 text-white font-medium rounded-full hover:border-primary-500 hover:text-primary-400 transition-all transform hover:-translate-y-1 inline-block">
-                    Ver Más Proyectos
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto Section -->
-    <section id="contacto" class="py-20 bg-gray-950 relative">
-        <div class="blob bg-secondary-500/20" style="width: 400px; height: 400px; top: 10%; left: 5%;"></div>
-        
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ponte en <span class="gradient-text">Contacto</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-2xl mx-auto">¿Tienes un proyecto en mente? Contáctame y conversemos sobre cómo puedo ayudarte a hacerlo realidad.</p>
-            </div>
-            
-            <div class="flex flex-col md:flex-row gap-12">
-                <div class="md:w-1/3 reveal">
-                    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800 h-full">
-                        <h3 class="text-xl font-bold mb-6">Información de Contacto</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-envelope text-primary-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white mb-1">Email</h4>
-                                    <a href="mailto:contacto@kenercotrina.com" class="text-gray-400 hover:text-primary-400 transition-colors">contacto@kenercotrina.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-phone-alt text-primary-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white mb-1">Teléfono</h4>
-                                    <a href="tel:+51987654321" class="text-gray-400 hover:text-primary-400 transition-colors">+51 987 654 321</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt text-primary-400"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium text-white mb-1">Ubicación</h4>
-                                    <p class="text-gray-400">Lima, Perú</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-10">
-                            <h4 class="font-medium text-white mb-4">Sígueme en</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-all">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-all">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-all">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white transition-all">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="md:w-2/3 reveal">
-                    <div class="bg-gray-900/50 p-8 rounded-2xl border border-gray-800">
-                        <h3 class="text-xl font-bold mb-6">Envíame un Mensaje</h3>
-                        
-                        <form id="contact-form">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                <div>
-                                    <label for="name" class="block text-gray-400 mb-2">Nombre</label>
-                                    <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary-500 contact-input" placeholder="Tu nombre">
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-gray-400 mb-2">Email</label>
-                                    <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary-500 contact-input" placeholder="Tu email">
-                                </div>
-                            </div>
-                            
-                            <div class="mb-6">
-                                <label for="subject" class="block text-gray-400 mb-2">Asunto</label>
-                                <input type="text" id="subject" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary-500 contact-input" placeholder="Asunto del mensaje">
-                            </div>
-                            
-                            <div class="mb-6">
-                                <label for="message" class="block text-gray-400 mb-2">Mensaje</label>
-                                <textarea id="message" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary-500 contact-input" placeholder="Tu mensaje"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-primary-500/20 transition-all transform hover:-translate-y-1">
-                                Enviar Mensaje
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-10 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <a href="#" class="flex items-center space-x-2">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo_verde-XOG7vWisiY45bWbLBEvBfG7I1VHAhh.png" alt="Kener Cotrina Logo" class="h-10">
-                        <span class="text-xl font-bold font-space text-white">Kener<span class="text-primary-400">Cotrina</span></span>
-                    </a>
-                    <p class="text-gray-400 mt-2">Desarrollador WordPress Junior</p>
-                </div>
-                
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="#inicio" class="text-gray-400 hover:text-primary-400 transition-colors">Inicio</a>
-                    <a href="#sobre-mi" class="text-gray-400 hover:text-primary-400 transition-colors">Sobre Mí</a>
-                    <a href="#servicios" class="text-gray-400 hover:text-primary-400 transition-colors">Servicios</a>
-                    <a href="#portafolio" class="text-gray-400 hover:text-primary-400 transition-colors">Portafolio</a>
-                    <a href="#contacto" class="text-gray-400 hover:text-primary-400 transition-colors">Contacto</a>
-                </div>
-                
-                <div class="mt-6 md:mt-0">
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
-                <p class="text-gray-500">&copy; 2025 Kener Cotrina. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+                    </h2>
     
-    <!-- Main JavaScript -->
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Particles.js
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#00e64d"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#00e64d",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "grab"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 140,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-        
-        // Scroll Reveal Animation
-        function reveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            for (let i = 0; i < reveals.length; i++) {
-                const windowHeight = window.innerHeight;
-                const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 150;
+                    <div class="w-full flex justify-between gap-8">
+                        <button class="bg-black text-white font-Monserrat  lg:text-[1.75em] px-16 py-4 mt-12 rounded-3xl">       
+                            <a href="#Contacto">Portafolio</a>
+                        </button>
+                        <button class="border-4 border-white text-white font-Monserrat lg:text-[1.75em] px-16 py-3 mt-12 rounded-3xl">       
+                            <a href="#Contacto">Contacto</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-full">2</div>
+    
+            </section>
+        </div>
+        <section class="w-full bg-black flex flex-col-reverse p-5 gap-20 lg:flex-row lg:px-64 lg:py-32 rounded-bl-3xl rounded-br-3xl">
+            <div class="w-full flex justify-center">
+                <img src="/assets/images/5800.jpg" width="482px" alt="sobre mi" class="rounded-[64px]">
+
+            </div>
+            <div class="w-full flex flex-col text-white text-justify font-Monserrat">
+                <span class="font-extrabold text-5xl">SOBRE MI</span>
+                <p class="text-[1.2em] lg:text-[1.3em]">¡Hola! Soy Kener, un apasionado diseñador web con una sólida trayectoria en la creación de experiencias 
+                    digitales impactantes. Mi enfoque se centra en la fusión de creatividad y tecnología para transformar 
+                    ideas en soluciones visualmente atractivas y funcionales.
+                </p>
                 
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add('active');
-                }
-            }
-        }
-        
-        window.addEventListener('scroll', reveal);
-        reveal(); // To check the initial state
-        
-        // Portfolio Filter
-        const portfolioFilters = document.querySelectorAll('.portfolio-filter');
-        
-        portfolioFilters.forEach(filter => {
-            filter.addEventListener('click', () => {
-                // Remove active class from all filters
-                portfolioFilters.forEach(f => f.classList.remove('active'));
+               
+                        <article class="mt-5">
+                            <span class="text-2xl text-[#A6FC1B] font-bold">Carrera</span>
+                            <P class="font-Boldonse text-[0.8em] mt-2">ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES</P>
+                            <span class="text-[0.8em]">ZEGEL IPAE  <i class="font-Boldonse" style="color: #A6FC1B;"> > </i> 2019-2023</span>
+                        </article>
+                        <div class="w-full flex flex-row">
+                            <div class="w-full">
+                                <article class="mt-3">
+                                    <span class="text-2xl text-[#A6FC1B] font-bold">Cursos</span>
+                                    <P class="font-Boldonse text-[0.8em] mt-3">HTML  +  CSS  +  JS</P>
+                                    <span class="text-[0.8em]">ENTER TECH SCHOOL <i class="font-Boldonse" style="color: #A6FC1B;"> > </i> 2024-2025</span>
                 
-                // Add active class to clicked filter
-                filter.classList.add('active');
+                                    <P class="font-Boldonse text-[0.8em] mt-2">WORDPRESS TOTAL</P>
+                                    <span class="text-[0.8em]">UDEMY <i class="font-Boldonse" style="color: #A6FC1B;"> > </i>2024</span>
                 
-                // Here you would normally filter the portfolio items
-                // For this demo, we're just toggling the active class
-            });
-        });
+                                    <P class="font-Boldonse text-[0.8em] mt-2">JAVASCRIPT TOTAL</P>
+                                    <span class="text-[0.8em]">UDEMY<i class="font-Boldonse" style="color: #A6FC1B;"> > </i> 2024</span>
+                                </article>
+                            </div>
+                            <div class="w-full flex justify-end items-center relative ">
+                                <img src="/assets/images/logo_verde.png" width="150px" alt="logo KCMSMART" class="absolute bottom-0 right-0">
+                            </div>
+                        </div>
+                        
         
-        // Form Submission
-        const contactForm = document.getElementById('contact-form');
-        
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Here you would normally handle the form submission
-            // For this demo, we'll just show an alert
-            alert('¡Gracias por tu mensaje! Te responderé lo antes posible.');
-            contactForm.reset();
-        });
-        
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-        
-        // Active Navigation Link on Scroll
-        function setActiveNavLink() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let currentSection = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (window.scrollY >= sectionTop - 200) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${currentSection}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', setActiveNavLink);
-        setActiveNavLink(); // Set initial state
-    </script>
+            </div>
+        </section>
+        <section class="w-full bg-white flex flex-col justify-center items-center p-5 lg:px-32">
+            <span class="font-extrabold text-5xl mt-60">SERVICIO</span>
+            <p class="text-2xl font-Monserrat font-medium text-[#5A5A5A] mt-10 text-center lg:w-lvh">
+                "Cuenta conmigo para dar vida a tu proyecto. Revisa los servicios que ofrezco y sus precios."
+            </p>
+
+            <section class="w-full mt-15 flex flex-col  justify-center items-center lg:flex-row gap-5">
+                <article class="w-[396px] h-[645px] border-[5px] border-black rounded-3xl">
+
+
+                </article>
+
+
+                <article class="w-[396px] h-[645px] border-[5px] border-black rounded-3xl">
+
+
+                </article>
+
+
+                <article class="w-[396px] h-[645px] border-[5px] border-black rounded-3xl">
+
+
+                </article>
+            </section>
+        </section>
+    </main>
+    <footer class="w-full p-4 font-Monserrat text-md font-extrabold bg-black text-white text-center uppercase lg:text-lg">
+        <p>© 2025 KCMSMART. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
+
+<!--npx @tailwindcss/cli -i ./src/input.css -o ./output.css --watch -->
