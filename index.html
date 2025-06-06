@@ -11,8 +11,8 @@
     <header class="w-full bg-[#18F29B]">
         <nav class="w-full flex justify-between items-center lg:justify-center">
             <div class="flex justify-between lg:w-[1084px]  lg:bg-black lg:justify-evenly items-center gap-24 p-4  rounded-bl-3xl rounded-br-3xl">
-                <a class="flex lg:hidden" href="/index.html"><img src="/assets/images/logo_negro.png" width="45px" alt="logo kcm smart"rounded-bl-3xl rounded-br-3xl></a>
-                <a class="hidden lg:flex" href="/index.html"><img src="/assets/images/logo_blanco.png" width="45px" alt="logo kcm smart"></a>
+                <a class="flex lg:hidden" href="/index.html"><img src="./assets/images/logo_negro.png" width="45px" alt="logo kcm smart"rounded-bl-3xl rounded-br-3xl></a>
+                <a class="hidden lg:flex" href="/index.html"><img src="./assets/images/logo_blanco.png" width="45px" alt="logo kcm smart"></a>
                 <ul class="hidden  gap-12 text-white font-Monserrat font-medium text-[1.125em] lg:flex">
                     <li><a href="#Sobremi">SOBRE MI</a></li>
                     <li><a href="#Servicios">SERVICIO</a></li>
@@ -49,12 +49,12 @@
         </div>
 
         <!--Sección de Sobre mi-->
-        <section class="w-full bg-black flex flex-col-reverse p-5 gap-20 lg:flex-row lg:px-64 lg:py-32 rounded-bl-3xl rounded-br-3xl">
+        <section class="w-full bg-black flex flex-col-reverse p-5 gap-20 md:lg:px-32 lg:flex-row lg:px-64 lg:py-32 rounded-bl-3xl rounded-br-3xl">
             <div class="w-full flex justify-center">
-                <img src="/assets/images/5800.jpg" width="482px" alt="sobre mi" class="rounded-[64px]">
+                <img src="/assets/images/5800.jpg"  alt="sobre mi" class=" rounded-[64px] lg:w-[498px]">
 
             </div>
-            <div class="w-full flex flex-col text-white text-justify font-Monserrat">
+            <div class="w-full flex flex-col text-white text-justify font-Monserrat mt-10">
                 <span class="font-extrabold text-5xl">SOBRE MI</span>
                 <p class="text-[1.2em] lg:text-[1.3em]">¡Hola! Soy Kener, un apasionado diseñador web con una sólida trayectoria en la creación de experiencias 
                     digitales impactantes. Mi enfoque se centra en la fusión de creatividad y tecnología para transformar 
@@ -91,13 +91,13 @@
         </section>
 
         <!--Sección de Servicios-->
-        <section class="w-full bg-white flex flex-col justify-center items-center p-5 lg:px-32">
+        <section class="w-full bg-white flex flex-col justify-center items-center p-5  lg:px-32">
             <span class="font-extrabold text-5xl mt-60">SERVICIO</span>
             <p class="text-2xl font-Monserrat font-medium text-[#5A5A5A] mt-10 text-center lg:w-lvh">
                 "Cuenta conmigo para dar vida a tu proyecto. Revisa los servicios que ofrezco y sus precios."
             </p>
 
-            <section class="w-full mt-15 flex flex-col  justify-center items-center lg:flex-row gap-5">
+            <section class="w-full mt-15 flex flex-wrap  justify-center items-center md:flex-col lg:flex-row gap-5">
                
                 <!-- Landing Page -->
                 <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg">
@@ -207,9 +207,75 @@
 
         <!--Sección de Portafolio-->
 
-        <section>
+        <section class="w-full  mt-40 lg:px-32 lg:mt-40 overflow-hidden">
 
+            <div class=" z-10 flex flex-col justify-center items-center gap-20 p-5">
+                <span class="font-extrabold text-5xl ">PORTAFOLIO</span>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    
+                    <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
+                        <div class="flex justify-center p-1">
+                            <img src="" width="192px" height="195px" alt="Portafolio image" class="bg-black">
+                        </div>
+                        <div class="flex flex-col justify-between items-center text-center px-2 py-4">
+                            <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
+                            <span class="font-Monserrat font-normal text-[14px] lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
+                            <span class="font-Monserrat font-normal text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
+                            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-2xl">Ver</button>
+                        </div>
+
+                    </article>
+
+                    <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
+                        <div class="flex justify-center p-1">
+                            <img src="" width="192px" height="195px" alt="Portafolio image" class="bg-black">
+                        </div>
+                        <div class="flex flex-col justify-between items-center text-center px-2 py-4">
+                            <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
+                            <span class="font-Monserrat font-normal text-[14px] lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
+                            <span class="font-Monserrat font-normal text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
+                            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-2xl">Ver</button>
+                        </div>
+
+                    </article>
+
+                    <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
+                        <div class="flex justify-center p-1">
+                            <img src="" width="192px" height="195px" alt="Portafolio image" class="bg-black">
+                        </div>
+                        <div class="flex flex-col justify-between items-center text-center px-2 py-4">
+                            <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
+                            <span class="font-Monserrat font-normal text-[14px] lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
+                            <span class="font-Monserrat font-normal text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
+                            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-2xl">Ver</button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
+                        <div class="flex justify-center p-1">
+                            <img src="" width="192px" height="195px" alt="Portafolio image" class="bg-black">
+                        </div>
+                        <div class="flex flex-col justify-between items-center text-center px-2 py-4">
+                            <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
+                            <span class="font-Monserrat font-normal text-[14px] lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
+                            <span class="font-Monserrat font-normal text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
+                            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-2xl">Ver</button>
+                        </div>
+
+                    </article>
+
+                </div>
+             
+            </div>
         </section>
+          
+        <!--Sección de Preguntas Frecuentes-->
+        <section class="mt-40 bg-amber-300">
+1q
+        </section>
+          
     </main>
     <footer class="w-full p-4 font-Monserrat text-md font-extrabold bg-black text-white text-center uppercase lg:text-lg">
         <p>© 2025 KCMSMART. Todos los derechos reservados.</p>
