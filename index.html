@@ -11,8 +11,8 @@
     <header class="w-full bg-[#18F29B]">
         <nav class="w-full flex justify-between items-center lg:justify-center">
             <div class="flex justify-between lg:w-[1084px]  lg:bg-black lg:justify-evenly items-center gap-24 p-4  rounded-bl-3xl rounded-br-3xl">
-                <a class="flex lg:hidden" href="/index.html"><img src="./assets/images/logo_negro.png" width="45px" alt="logo kcm smart"rounded-bl-3xl rounded-br-3xl></a>
-                <a class="hidden lg:flex" href="/index.html"><img src="./assets/images/logo_blanco.png" width="45px" alt="logo kcm smart"></a>
+                <a class="flex lg:hidden" href="/index.html"><img src="../assets/images/logo_negro.png" width="45px" alt="logo kcm smart"rounded-bl-3xl rounded-br-3xl></a>
+                <a class="hidden lg:flex" href="/index.html"><img src="../assets/images/logo_blanco.png" width="45px" alt="logo kcm smart"></a>
                 <ul class="hidden  gap-12 text-white font-Monserrat font-medium text-[1.125em] lg:flex">
                     <li><a href="#Sobremi">SOBRE MI</a></li>
                     <li><a href="#Servicios">SERVICIO</a></li>
@@ -92,7 +92,7 @@
 
         <!--Sección de Servicios-->
         <section class="w-full bg-white flex flex-col justify-center items-center p-5  lg:px-32">
-            <span class="font-extrabold text-5xl mt-60">SERVICIO</span>
+            <span class="font-extrabold  font-Monserrat text-5xl mt-60">SERVICIO</span>
             <p class="text-2xl font-Monserrat font-medium text-[#5A5A5A] mt-10 text-center lg:w-lvh">
                 "Cuenta conmigo para dar vida a tu proyecto. Revisa los servicios que ofrezco y sus precios."
             </p>
@@ -210,8 +210,8 @@
         <section class="w-full  mt-40 lg:px-32 lg:mt-40 overflow-hidden">
 
             <div class=" z-10 flex flex-col justify-center items-center gap-20 p-5">
-                <span class="font-extrabold text-5xl ">PORTAFOLIO</span>
-                <div class="flex flex-wrap items-center justify-center gap-4">
+                <span class="font-extrabold font-Monserrat text-5xl ">PORTAFOLIO</span>
+                <div class="flex flex-wrap items-center justify-center gap-4 mb-20">
                     
                     <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
                         <div class="flex justify-center p-1">
@@ -272,14 +272,169 @@
         </section>
           
         <!--Sección de Preguntas Frecuentes-->
-        <section class="mt-40 bg-amber-300">
-1q
+        <section class="mt-40 bg-amber-300 flex flex-col lg:flex-row p-5  gap-5 lg:px-32">
+            <div>
+                <span class="font-extrabold  font-Monserrat uppercase text-5xl">Preguntas Frecuentes</span>
+                <p class="text-2xl font-Monserrat font-medium text-[#5A5A5A] mt-10 text-center lg:w-lvh">
+                    "¿Tienes alguna pregunta? ¡No dudes en contactarme!"
+                </p>  
+                <img src="./assets/images/preguntas.png" width="400px" alt="Preguntas images">              
+            </div>
+            <div class=" w-full flex flex-col gap-3 font-Monserrat">
+
+
+                <div class="bg-white rounded-xl shadow p-4">
+                    <button onclick="toggleAnswer(1)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                        ¿Cuál es la Modalidad de pago?
+                      <span id="icon-1">+</span>
+                    </button>
+                    <div id="answer-1" class="mt-2 text-gray-600 hidden">
+                        Una vez firmado el contrato y para iniciar el trabajo Se paga el 50% al iniciar y el 50% restante al finalizar. <br><br>
+                        <span class=" mt-5">Transferencia bancaria | Paypal | Yape/Plin</span>
+
+                    </div>
+                  </div>
+
+                    <div class="bg-white rounded-xl shadow p-4">
+                        <button onclick="toggleAnswer(2)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                        ¿Cuánto tiempo se demora en hacer el proyecto?
+                        <span id="icon-2">+</span>
+                        </button>
+                        <div id="answer-2" class="mt-2 text-gray-600 hidden">
+                            Para todos los proyectos se demora entre 7 y 10 días habiles. <br><br>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white rounded-xl shadow p-4">
+                        <button onclick="toggleAnswer(3)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                        ¿Puedo Solicitar devolución de mi dinero?
+                        <span id="icon-3">+</span>
+                        </button>
+                        <div id="answer-3" class="mt-2 text-gray-600 hidden">
+                            Si, siempre y cuando sea por el 50% del pago inicial. Pero se te cobra una penalidad de 50% del total del pago inicial. <br><br>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white rounded-xl shadow p-4">
+                        <button onclick="toggleAnswer(4)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                        ¿Qué cubre la garantía?
+                        <span id="icon-4">+</span>
+                        </button>
+                        <div id="answer-4" class="mt-2 text-gray-600 hidden">
+                            Cubre solo cambios menores a los requerimientos del cliente en la informacion de contacto, como cambios en 
+                            el nombre o dirección de correo electrónico y entre otros (30 días).<br>
+                            No incluye cambios en el diseño o funcionalidad del sitio web. <br><br>
+                    
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white rounded-xl shadow p-4">
+                        <button onclick="toggleAnswer(5)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                        ¿Tienes guia o manual de funcionamiento?
+                        <span id="icon-5">+</span>
+                        </button>
+                        <div id="answer-5" class="mt-2 text-gray-600 hidden">
+                            Si, se te entregará un video personalizado de tu proyecto explicando funcionalidadades y como utilizarlo.
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow p-4">
+                        <button onclick="toggleAnswer(6)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                        ¿Tengo que entregar información del texto, imágenes y contacto?
+                        <span id="icon-6">+</span>
+                        </button>
+                        <div id="answer-6" class="mt-2 text-gray-600 hidden">
+                            Si, tienes que entregar la información de texto, imágenes, correo, redes sociales y todos los datos que crees conveniente para tu proyecto.
+                            Si no envias la información dentro del tiempo establecido del proyecto, se te entregará el proyecto con información predeterminada para que luego tu mismo lo personalizarlo.
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow p-4">
+                        <button onclick="toggleAnswer(7)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                        ¿Tengo que entregar información del texto, imágenes y contacto?
+                        <span id="icon-7">+</span>
+                        </button>
+                        <div id="answer-7" class="mt-2 text-gray-600 hidden">
+                            Si, tienes que entregar la información de texto, imágenes, correo, redes sociales y todos los datos que crees conveniente para tu proyecto.
+                            Si no envias la información dentro del tiempo establecido del proyecto, se te entregará el proyecto con información predeterminada para que luego tu mismo lo personalizarlo.
+                        </div>
+                    </div>
+
+            </div>
         </section>
-          
+        <!--Sección de Contacto-->
+        <section class="flex flex-col items-centert text-center font-Monserrat mt-20">
+            <span class="font-extrabold text-5xl uppercase">Ponte en Contacto</span>
+            <span class=" text-2xl font-normal mt-20">¿Tienes un proyecto en mente? <br>
+                Contáctame y conversemos sobre cómo puedo ayudarte a hacerlo realidad.</span>
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 p-5 gap-5">
+    
+                    <!-- Información de contacto -->
+                    <div class="border-4 border-black rounded-2xl text-start p-8 space-y-8 lg:w-[375px]">
+                      <h2 class="text-2xl font-bold">Información de contacto</h2>
+                
+                      <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-md bg-green-400"></div>
+                        <div>
+                          <p class="font-bold">Email</p>
+                          <p class="text-gray-600 font-semibold">contacto@kenercotrina.com</p>
+                        </div>
+                      </div>
+                
+                      <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-md bg-green-400"></div>
+                        <div>
+                          <p class="font-bold">Teléfono</p>
+                          <p class="text-gray-600 font-semibold">+51 987 654 321</p>
+                        </div>
+                      </div>
+                
+                      <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-md bg-green-400"></div>
+                        <div>
+                          <p class="font-bold">Ubicación</p>
+                          <p class="text-gray-600 font-semibold">Lima, Perú</p>
+                        </div>
+                      </div>
+                
+                      <div>
+                        <p class="font-bold">Sígueme En</p>
+                        <div class="flex space-x-4 mt-2">
+                          <div class="w-14 h-14 rounded-full bg-black"></div>
+                          <div class="w-14 h-14 rounded-full bg-black"></div>
+                          <div class="w-14 h-14 rounded-full bg-black"></div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Formulario -->
+                    <div class="mt-10">
+                      <h2 class="text-2xl font-bold mb-6">Envíame Un Mensaje</h2>
+                
+                      <form class="w-full space-y-6 mt-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                          <input type="text" placeholder="Nombre" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
+                          <input type="email" placeholder="Email" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
+                        </div>
+                
+                        <input type="text" placeholder="Asunto" class="w-full border-b-4 border-black  border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
+                
+                        <textarea placeholder="Mensaje" rows="5" class="w-full border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none resize-none"></textarea>
+                
+                        <button type="submit" class="w-full bg-black text-white font-bold py-3 rounded-md hover:bg-gray-800 mt-5 lg:mt-10">ENVIAR</button>
+                      </form>
+                    </div>
+                  </div>
+        </section>
+        
     </main>
     <footer class="w-full p-4 font-Monserrat text-md font-extrabold bg-black text-white text-center uppercase lg:text-lg">
         <p>© 2025 KCMSMART. Todos los derechos reservados.</p>
     </footer>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
 
