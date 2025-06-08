@@ -18,3 +18,6 @@ new Typed("#typed", {
       icon.textContent = "−";
     }
   }
+
+
+  

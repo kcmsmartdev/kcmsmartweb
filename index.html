@@ -6,11 +6,15 @@
     <title>KCMSMART| Desarrollo sitios webs, landing pages, tienda online y blogs</title>
     <link rel="stylesheet" href="./output.css">
     <script src="https://kit.fontawesome.com/8c2f1b82d6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 <body>
+
   <header class="w-full bg-[#18F29B]">
     <nav class="w-full flex justify-between items-center lg:justify-center">
-      <div class="flex justify-between items-center gap-6 lg:w-[1084px] lg:bg-black lg:justify-evenly py-2 rounded-bl-3xl rounded-br-3xl">
+      <div class="flex justify-between items-center p-5 gap-6 lg:w-[1084px] lg:bg-black/50 lg:justify-evenly py-2 rounded-bl-3xl rounded-br-3xl">
   
         <!-- Logo móvil -->
         <a class="flex lg:hidden" href="/index.html">
@@ -23,7 +27,7 @@
         </a>
   
         <!-- Menú navegación -->
-        <ul class="hidden lg:flex gap-12 text-white font-Monserrat font-medium text-[1.125em]">
+        <ul class="hidden lg:flex gap-12 text-white font-Monserrat-Thin tracking-[2px] text-[0.8em]">
           <li><a href="#Sobremi" class="hover:underline transition">SOBRE MI</a></li>
           <li><a href="#Servicios" class="hover:underline transition">SERVICIO</a></li>
           <li><a href="#Portafolio" class="hover:underline transition">PORTAFOLIO</a></li>
@@ -33,434 +37,448 @@
       </div>
     </nav>
   </header>
-  
-    <main>
-        <div class="w-full bg-black">
+  <main class="w-full h-full">
 
-          <section class="w-full h-screen bg-[#18F29B] flex flex-col lg:flex-row rounded-bl-3xl rounded-br-3xl overflow-hidden">
-            <!-- Contenido principal -->
-            <div class="w-full flex flex-col justify-center items-start text-start px-6 lg:px-32 py-10 lg:py-0">
-              <h1 class="font-Boldonse text-2xl lg:text-[1.25em] text-black">
-                DISEÑO <br><br>
-                <span class="text-4xl lg:text-6xl text-white">PÁGINAS WEBS</span>
-              </h1>
-              <h2 class="w-full font-Monserrat text-[1.2em] lg:text-[1.5em] mt-6 text-black text-justify leading-relaxed">
-                Transformo ideas en experiencias web únicas y personalizadas que destacan en el mundo digital.
-              </h2>
+    <!-- Sección principal -->
+     <div class=" bg-black">
+      <section class="w-full h-screen bg-[#18F29B] flex flex-col items-center justify-center rounded-bl-3xl rounded-br-3xl capitalize">
+        <!-- Contenido principal -->
+        
+          <h1 class="font-Boldonse text-black gap-4  text-center ">
+            <span class="tracking-wide text-3xl animate-pulse">DISEÑO</span> <br>
+            
+            <span id="typed" class="text-white font-Boldonse text-6xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight"></span>
+          </h1>
           
-              <!-- Botones -->
-              <div class="mt-10 w-full flex flex-col lg:flex-row items-center justify-start gap-6">
-                <a href="#Portafolio"
-                   class="transform transition duration-300 ease-in-out hover:scale-105
-                          text-white bg-black hover:bg-white hover:text-black 
-                          font-Monserrat text-lg lg:text-2xl px-10 py-4 rounded-full shadow-md text-center">
-                  Portafolio
-                </a>
-                <a href="#Contacto"
-                   class="transform transition duration-300 ease-in-out hover:scale-105
-                          text-white border-4 border-white hover:bg-white hover:text-black 
-                          font-Monserrat text-lg lg:text-2xl px-10 py-4 rounded-full shadow-md text-center">
-                  Contacto
-                </a>
+          <h2 class="font-CalSans text-[1.2em] lg:text-[1.5em] mt-6 text-black/60 text-center p-5 lg:w-lvh">
+            Transformo ideas en experiencias web únicas y personalizadas que destacan en el mundo digital.
+          </h2>
+      
+          <!-- Botones -->
+          <div class="mt-10 w-full flex flex-col lg:flex-row items-center justify-center gap-6">
+            <a href="#Portafolio"
+               class="transform transition duration-300 ease-in-out hover:scale-105 border-4 border-black
+                      text-white bg-black hover:bg-white hover:text-black hover:border-white
+                      font-Monserrat text-lg lg:text-2xl px-10 py-4 rounded-full shadow-md text-center">
+              Portafolio
+            </a>
+            <a href="#Contacto"
+               class="transform transition duration-300 ease-in-out hover:scale-105
+                      text-white border-4 border-white hover:bg-white hover:text-black 
+                      font-Monserrat text-lg lg:text-2xl px-10 py-4 rounded-full shadow-md text-center">
+              Contacto
+            </a>
+          </div>
+      </section>
+     </div>
+    
+
+    <!--Sección de Sobre mi-->
+    <section class="w-full bg-black flex flex-col-reverse p-5 gap-20 md:lg:px-32 lg:flex-row lg:px-64 lg:py-32  mb-10 lg:mb-0 rounded-bl-3xl rounded-br-3xl">
+      <div class="w-full flex justify-center mb-10 lg:mb-5" data-aos="fade-right">
+          <img src="./assets/images/5800.jpg"  alt="sobre mi" class=" rounded-[64px] lg:w-[498px]">
+
+      </div>
+      <div class="w-full flex flex-col text-white text-justify mt-10" data-aos="fade-up">
+          <span class="font-MonserratExtraBold text-5xl">SOBRE MI</span>
+          <p class="text-[1.2em] lg:text-[1.3em] font-MonserratRegular mt-5">¡Hola! Soy <strong>Kener</strong>, un apasionado diseñador web con una sólida trayectoria en la creación de experiencias 
+              digitales impactantes. Mi enfoque se centra en la fusión de creatividad y tecnología para transformar 
+              ideas en soluciones visualmente atractivas y funcionales.
+          </p>
+          
+         
+                  <article class="mt-5">
+                      <span class="text-1xl text-[#A6FC1B] font-Boldonse">Carrera</span>
+                      <P class="font-MonserratExtraBold text-[1em] mt-2">ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES</P>
+                      <span class="text-[1em] text-white/70 font-MonserratLight">ZEGEL IPAE  <i class="font-MonserratExtraBold" style="color: #A6FC1B;"> > </i> 2019-2023</span>
+                  </article>
+                  <div class="w-full flex flex-row">
+                      <div class="w-full">
+                          <article class="mt-3">
+                              <span class="text-1xl text-[#A6FC1B] font-Boldonse">Cursos</span>
+                              <P class="font-MonserratExtraBold text-[1em] mt-3">HTML  +  CSS  +  JS</P>
+                              <span class="text-[1em] text-white/70 font-MonserratLight">ENTER TECH SCHOOL <i class="font-MonserratRegular" style="color: #A6FC1B;"> > </i> 2024-2025</span>
+          
+                              <P class="font-MonserratExtraBold text-[1em] mt-2">WORDPRESS TOTAL</P>
+                              <span class="text-[1em] text-white/70 font-MonserratLight">UDEMY <i class="font-Boldonse" style="color: #A6FC1B;"> > </i>2024</span>
+          
+                              <P class="font-MonserratExtraBold text-[1em] mt-2">JAVASCRIPT TOTAL</P>
+                              <span class="text-[1em] text-white/70 font-MonserratLight">UDEMY<i class="font-Boldonse" style="color: #A6FC1B;"> > </i> 2024</span>
+                          </article>
+                      </div>
+                      <div class="w-full flex justify-end items-center relative ">
+                          <img src="./assets/images/logo_verde.png" alt="logo KCMSMART" class="absolute bottom-0 right-0 w-[130px] lg:w-180px]">
+                      </div>
+                  </div>
+                  
+  
+      </div>
+    </section>
+
+   <!--Sección de Servicios-->
+    <section class="w-full bg-white flex flex-col justify-center items-center px-5  lg:px-32">
+    <span class="font-extrabold  font-MonserratExtraBold text-5xl mt-30">SERVICIO</span>
+    <p class="text-2xl font-MonserratRegular text-[#5A5A5A] mt-10 text-center lg:w-lvh">
+        "Cuenta conmigo para dar vida a tu proyecto. Revisa los servicios que ofrezco y sus precios."
+    </p>
+
+    <div class="w-full mt-15 flex flex-wrap  justify-center items-center md:flex-col lg:flex-row gap-8">
+       
+        <!-- Landing Page -->
+        <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-110" data-aos="flip-left">
+
+          
+            <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
+              <div class="flex flex-col gap-1 text-start">
+                <span class="font-CalSans font-bold text-2xl">Landing Page</span>
+                <span class="font-MonserratLight text-2xl">7 días habiles</span>
               </div>
+              <span class="font-Boldonse text-5xl mt-2">$170.<span class="text-2xl">00</span></span>
             </div>
           
-            <!-- Imagen u otro contenido -->
-            <div class="w-full flex items-center justify-center p-6">
-              <!-- Aquí puedes poner una imagen ilustrativa o animación -->
-              <img src="./assets/images/tu-imagen.svg" alt="Diseño Web" class="w-full max-w-md lg:max-w-full">
-            </div>
-          </section>
+           
+            <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
+              <div class="flex flex-col gap-2 font-MonserratLight">
+                <span>Diseño personalizado</span>
+                <span>Diseño Responsive</span>
+                <span>Optimizada para conversión</span>
+                <span>Optimización de carga</span>
+                <span>Integración con redes sociales</span>
+                <span>Formulario de contacto</span>
+                <span>Animaciones</span>
+                <span>Hosting y dominio por 1 año</span>
+                <span>30 Días de garantía y mantención</span>
+              </div>
           
+              <button
+                type="button"
+                class="bg-black text-white font-CalSans text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
+              >
+                Solicitar
+              </button>
+            </div>
+        </article>
+
+        <!-- Sitio Web -->
+        <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-110" data-aos="flip-up">
+
+          
+            <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
+              <div class="flex flex-col gap-1 text-start">
+                <span class="font-CalSans font-bold text-2xl">Sitio Web</span>
+                <span class="font-MonserratLight font-extralight text-2xl">7 días habiles</span>
+              </div>
+              <span class="font-Boldonse text-5xl mt-2">$350.<span class="text-2xl">00</span></span>
+            </div>
+          
+           
+            <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
+              <div class="flex flex-col gap-2 font-MonserratLight">
+                <span>Sitios web estáticos</span>
+                <span>Diseño Responsive</span>
+                <span>Optimización SEO básico</span>
+                <span>Animaciones</span>
+                <span>Integración con redes sociales</span>
+                <span>Optimización de carga</span>
+                <span>Formulario de contacto</span>
+                <span>Hosting y dominio por 1 año</span>
+                <span>30 Días de garantía y mantención</span>
+              </div>
+          
+              <button
+                type="button"
+                class="bg-black text-white font-CalSans text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
+              >
+                Solicitar
+              </button>
+            </div>
+        </article>
+          <!--Tienda Online -->
+        <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-110" data-aos="flip-right">
+
+          
+            <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
+              <div class="flex flex-col gap-1 text-start">
+                <span class="font-CalSans font-bold text-2xl">E-commerce WordPress</span>
+                <span class="font-MonserratLight font-extralight text-2xl">7 días habiles</span>
+              </div>
+              <span class="font-Boldonse text-5xl mt-2">$550.<span class="text-2xl">00</span></span>
+            </div>
+          
+           
+            <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
+              <div class="flex flex-col gap-2 font-MonserratLight">
+                <span>Diseño personalizado y Responsive</span>
+                <span>Ingreso  de 30 productos</span>
+                <span>Gestión de productos</span>
+                <span>Optimización de SEO</span>
+                <span>Optimización de carga</span>
+                <span>Integración con redes sociales</span>
+                <span>Formulario de contacto</span>
+                <span>Hosting y dominio por 1 año</span>
+                <span>30 Días de garantía y mantención</span>
+              </div>
+          
+              <button
+                type="button"
+                class="bg-black text-white font-CalSans text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
+              >
+                Solicitar
+              </button>
+            </div>
+        </article>
+      </div>
+    </section>
+
+    <!--Sección de Portafolio-->
+
+    <section class="w-full bg-white p-5 mt-30 flex flex-col justify-center items-center">
+      <span class="font-MonserratExtraBold text-5xl">PORTAFOLIO</span>
+      <p class="text-2xl font-MonserratRegular text-[#5A5A5A] mt-10 text-center lg:w-lvh">
+        Estos son algunos de mis proyectos más destacados.
+    </p>
+
+    <div class="w-full flex flex-wrap items-center justify-center gap-5 mt-10">
+
+      <!--Proyecto 1-->
+      <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl rounded-3xl p-2" data-aos="fade-right">
+        <div class="flex justify-center p-1">
+            <img src="" alt="Portafolio image" class="bg-black w-[150px]">
+        </div>
+        <div class="w-full flex flex-col justify-between items-center text-center p-2 " data-aos="fade-right">
+          <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
+            <span class="font-CalSans font-normal text-[14px] text-black/70 lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
+            <span class="font-MonserratLight text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
+            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-3xl  hover:bg-black hover:text-white cursor-pointer">Ver</button>  
         </div>
 
-        <!--Sección de Sobre mi-->
-        <section class="w-full bg-black flex flex-col-reverse p-5 gap-20 md:lg:px-32 lg:flex-row lg:px-64 lg:py-32 rounded-bl-3xl rounded-br-3xl">
-            <div class="w-full flex justify-center">
-                <img src="./assets/images/5800.jpg"  alt="sobre mi" class=" rounded-[64px] lg:w-[498px]">
+      </article>
 
+      <!--Proyecto 2-->
+      <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl rounded-3xl p-2" data-aos="fade-left">
+        <div class="flex justify-center p-1">
+            <img src="" alt="Portafolio image" class="bg-black w-[150px]">
+        </div>
+        <div class="w-full flex flex-col justify-between items-center text-center p-2 ">
+          <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Blog Viajes</span>
+            <span class="font-CalSans font-normal text-[14px] text-black/70 lg:text-md">Un blog ideal para viajes donde podrás compartir tus aventuras y anecdotas. </span>
+            <span class="font-MonserratLight text-[14px]">WORDPRESS</span>
+            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-3xl  hover:bg-black hover:text-white cursor-pointer">Ver</button>  
+        </div>
+
+      </article>
+
+
+      <!--Proyecto 3-->
+      <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl rounded-3xl p-2" data-aos="fade-right">
+        <div class="flex justify-center p-1">
+            <img src="" alt="Portafolio image" class="bg-black w-[150px]">
+        </div>
+        <div class="w-full flex flex-col justify-between items-center text-center p-2 ">
+          <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Landing Page de Fotógrafo</span>
+            <span class="font-CalSans font-normal text-[14px] text-black/70 lg:text-md">Su principal función es mostrar el trabajo y obtener clientes que te escribiran a whatsapp para un contacto más directo.</span>
+            <span class="font-MonserratLight text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
+            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-3xl hover:bg-black hover:text-white cursor-pointer">Ver</button>  
+        </div>
+
+      </article>
+
+
+
+      <!--Proyecto 4-->
+      <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl rounded-3xl p-2" data-aos="fade-left">
+        <div class="flex justify-center p-1">
+            <img src="" alt="Portafolio image" class="bg-black w-[150px]">
+        </div>
+        <div class="w-full flex flex-col justify-between items-center text-center p-2 ">
+          <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">E-commerce Follow Tiktok</span>
+            <span class="font-CalSans font-normal text-[14px] text-black/70 lg:text-md">Es una tienda online para aumentar seguidores en la red social de tiktok. Tiene incorporado medio de pago. </span>
+            <span class="font-MonserratLight text-[14px]">WORDPRESS | WOOCOMMERCE </span>
+            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-3xl hover:bg-black hover:text-white cursor-pointer">Ver</button>  
+        </div>
+      </article>
+    </div>
+    </section>
+
+
+
+    <!--Sección de Preguntas Frecuentes-->
+    <section class="mt-40 bg-[#1FF29E]/30 flex flex-col lg:flex-row p-5  gap-5 lg:px-32 font-MonserratRegular">
+      <div>
+          <span class="font-extrabold  font-MonserratExtraBold uppercase text-5xl">Preguntas Frecuentes</span>
+          <p class="text-2xl font-Monserrat font-medium text-[#5A5A5A] mt-10 text-center lg:w-lvh">
+              "¿Tienes alguna pregunta? ¡No dudes en contactarme!"
+          </p>  
+          <img src="./assets/images/preguntas.png" width="400px" alt="Preguntas images">              
+      </div>
+      <div class=" w-full flex flex-col gap-3 font-Monserrat">
+
+
+          <div class="bg-white rounded-xl shadow p-4" data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom">
+              <button onclick="toggleAnswer(1)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                  ¿Cuál es la Modalidad de pago?
+                <span id="icon-1">+</span>
+              </button>
+              <div id="answer-1" class="mt-2 text-gray-600 hidden">
+                  Una vez firmado el contrato y para iniciar el trabajo Se paga el 50% al iniciar y el 50% restante al finalizar. <br><br>
+                  <span class=" mt-5">Transferencia bancaria | Paypal | Yape/Plin</span>
+
+              </div>
             </div>
-            <div class="w-full flex flex-col text-white text-justify font-Monserrat mt-10">
-                <span class="font-extrabold text-5xl">SOBRE MI</span>
-                <p class="text-[1.2em] lg:text-[1.3em] mt-5">¡Hola! Soy <strong>Kener</strong>, un apasionado diseñador web con una sólida trayectoria en la creación de experiencias 
-                    digitales impactantes. Mi enfoque se centra en la fusión de creatividad y tecnología para transformar 
-                    ideas en soluciones visualmente atractivas y funcionales.
-                </p>
-                
-               
-                        <article class="mt-5">
-                            <span class="text-2xl text-[#A6FC1B] font-bold">Carrera</span>
-                            <P class="font-Boldonse text-[0.8em] mt-2">ADMINISTRACIÓN DE NEGOCIOS INTERNACIONALES</P>
-                            <span class="text-[0.8em]">ZEGEL IPAE  <i class="font-Boldonse" style="color: #A6FC1B;"> > </i> 2019-2023</span>
-                        </article>
-                        <div class="w-full flex flex-row">
-                            <div class="w-full">
-                                <article class="mt-3">
-                                    <span class="text-2xl text-[#A6FC1B] font-bold">Cursos</span>
-                                    <P class="font-Boldonse text-[0.8em] mt-3">HTML  +  CSS  +  JS</P>
-                                    <span class="text-[0.8em]">ENTER TECH SCHOOL <i class="font-Boldonse" style="color: #A6FC1B;"> > </i> 2024-2025</span>
-                
-                                    <P class="font-Boldonse text-[0.8em] mt-2">WORDPRESS TOTAL</P>
-                                    <span class="text-[0.8em]">UDEMY <i class="font-Boldonse" style="color: #A6FC1B;"> > </i>2024</span>
-                
-                                    <P class="font-Boldonse text-[0.8em] mt-2">JAVASCRIPT TOTAL</P>
-                                    <span class="text-[0.8em]">UDEMY<i class="font-Boldonse" style="color: #A6FC1B;"> > </i> 2024</span>
-                                </article>
-                            </div>
-                            <div class="w-full flex justify-end items-center relative ">
-                                <img src="./assets/images/logo_verde.png" width="150px" alt="logo KCMSMART" class="absolute bottom-0 right-0">
-                            </div>
-                        </div>
-                        
-        
-            </div>
-        </section>
 
-        <!--Sección de Servicios-->
-        <section class="w-full bg-white flex flex-col justify-center items-center p-5  lg:px-32">
-            <span class="font-extrabold  font-Monserrat text-5xl mt-60">SERVICIO</span>
-            <p class="text-2xl font-Monserrat font-medium text-[#5A5A5A] mt-10 text-center lg:w-lvh">
-                "Cuenta conmigo para dar vida a tu proyecto. Revisa los servicios que ofrezco y sus precios."
-            </p>
-
-            <section class="w-full mt-15 flex flex-wrap  justify-center items-center md:flex-col lg:flex-row gap-5">
-               
-                <!-- Landing Page -->
-                <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg">
-  
-                  
-                    <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
-                      <div class="flex flex-col gap-1 text-start">
-                        <span class="font-Monserrat font-bold text-2xl">Landing Page</span>
-                        <span class="font-Monserrat font-extralight text-2xl">7 días habiles</span>
-                      </div>
-                      <span class="font-Boldonse text-5xl mt-2">$170.<span class="text-2xl">00</span></span>
-                    </div>
-                  
-                   
-                    <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
-                      <div class="flex flex-col gap-2">
-                        <span>Diseño personalizado</span>
-                        <span>Diseño Responsive</span>
-                        <span>Optimizada para conversión</span>
-                        <span>Optimización de carga</span>
-                        <span>Integración con redes sociales</span>
-                        <span>Formulario de contacto</span>
-                        <span>Animaciones</span>
-                        <span>Hosting y dominio por 1 año</span>
-                        <span>30 Días de garantía y mantención</span>
-                      </div>
-                  
-                      <button
-                        type="button"
-                        class="bg-black text-white font-Monserrat font-extrabold text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
-                      >
-                        Solicitar
-                      </button>
-                    </div>
-                </article>
-
-                <!-- Sitio Web -->
-                <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg">
-  
-                  
-                    <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
-                      <div class="flex flex-col gap-1 text-start">
-                        <span class="font-Monserrat font-bold text-2xl">Sitio Web</span>
-                        <span class="font-Monserrat font-extralight text-2xl">7 días habiles</span>
-                      </div>
-                      <span class="font-Boldonse text-5xl mt-2">$350.<span class="text-2xl">00</span></span>
-                    </div>
-                  
-                   
-                    <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
-                      <div class="flex flex-col gap-2">
-                        <span>Sitios web estáticos</span>
-                        <span>Diseño Responsive</span>
-                        <span>Optimización SEO básico</span>
-                        <span>Animaciones</span>
-                        <span>Integración con redes sociales</span>
-                        <span>Optimización de carga</span>
-                        <span>Formulario de contacto</span>
-                        <span>Hosting y dominio por 1 año</span>
-                        <span>30 Días de garantía y mantención</span>
-                      </div>
-                  
-                      <button
-                        type="button"
-                        class="bg-black text-white font-Monserrat font-extrabold text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
-                      >
-                        Solicitar
-                      </button>
-                    </div>
-                </article>
-                  <!--Tienda Online -->
-                <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg">
-  
-                  
-                    <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
-                      <div class="flex flex-col gap-1 text-start">
-                        <span class="font-Monserrat font-bold text-2xl">E-commerce WordPress</span>
-                        <span class="font-Monserrat font-extralight text-2xl">7 días habiles</span>
-                      </div>
-                      <span class="font-Boldonse text-5xl mt-2">$550.<span class="text-2xl">00</span></span>
-                    </div>
-                  
-                   
-                    <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
-                      <div class="flex flex-col gap-2">
-                        <span>Diseño personalizado y Responsive</span>
-                        <span>Ingreso  de 30 productos</span>
-                        <span>Gestión de productos</span>
-                        <span>Optimización de SEO</span>
-                        <span>Optimización de carga</span>
-                        <span>Integración con redes sociales</span>
-                        <span>Formulario de contacto</span>
-                        <span>Hosting y dominio por 1 año</span>
-                        <span>30 Días de garantía y mantención</span>
-                      </div>
-                  
-                      <button
-                        type="button"
-                        class="bg-black text-white font-Monserrat font-extrabold text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
-                      >
-                        Solicitar
-                      </button>
-                    </div>
-                </article>
-            </section>
-        </section>
-
-        <!--Sección de Portafolio-->
-
-        <section class="w-full  mt-40 lg:px-32 lg:mt-40 overflow-hidden">
-
-            <div class=" z-10 flex flex-col justify-center items-center gap-20 p-5">
-                <span class="font-extrabold font-Monserrat text-5xl ">PORTAFOLIO</span>
-                <div class="flex flex-wrap items-center justify-center gap-4 mb-20">
-                    
-                    <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
-                        <div class="flex justify-center p-1">
-                            <img src="" width="192px" height="195px" alt="Portafolio image" class="bg-black">
-                        </div>
-                        <div class="flex flex-col justify-between items-center text-center px-2 py-4">
-                            <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
-                            <span class="font-Monserrat font-normal text-[14px] lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
-                            <span class="font-Monserrat font-normal text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
-                            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-2xl">Ver</button>
-                        </div>
-
-                    </article>
-
-                    <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
-                        <div class="flex justify-center p-1">
-                            <img src="" width="192px" height="195px" alt="Portafolio image" class="bg-black">
-                        </div>
-                        <div class="flex flex-col justify-between items-center text-center px-2 py-4">
-                            <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
-                            <span class="font-Monserrat font-normal text-[14px] lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
-                            <span class="font-Monserrat font-normal text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
-                            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-2xl">Ver</button>
-                        </div>
-
-                    </article>
-
-                    <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
-                        <div class="flex justify-center p-1">
-                            <img src="" width="192px" height="195px" alt="Portafolio image" class="bg-black">
-                        </div>
-                        <div class="flex flex-col justify-between items-center text-center px-2 py-4">
-                            <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
-                            <span class="font-Monserrat font-normal text-[14px] lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
-                            <span class="font-Monserrat font-normal text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
-                            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-2xl">Ver</button>
-                        </div>
-
-                    </article>
+              <div class="bg-white rounded-xl shadow p-4" data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom">
+                  <button onclick="toggleAnswer(2)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                  ¿Cuánto tiempo se demora en hacer el proyecto?
+                  <span id="icon-2">+</span>
+                  </button>
+                  <div id="answer-2" class="mt-2 text-gray-600 hidden">
+                      Para todos los proyectos se demora entre 7 y 10 días habiles. <br><br>
+                  </div>
+              </div>
 
 
-                    <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl">
-                        <div class="flex justify-center p-1">
-                            <img src="" width="192px" height="195px" alt="Portafolio image" class="bg-black">
-                        </div>
-                        <div class="flex flex-col justify-between items-center text-center px-2 py-4">
-                            <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
-                            <span class="font-Monserrat font-normal text-[14px] lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
-                            <span class="font-Monserrat font-normal text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
-                            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-2xl">Ver</button>
-                        </div>
+              <div class="bg-white rounded-xl shadow p-4" data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom">
+                  <button onclick="toggleAnswer(3)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                  ¿Puedo Solicitar devolución de mi dinero?
+                  <span id="icon-3">+</span>
+                  </button>
+                  <div id="answer-3" class="mt-2 text-gray-600 hidden">
+                      Si, siempre y cuando sea por el 50% del pago inicial. Pero se te cobra una penalidad de 50% del total del pago inicial. <br><br>
+                  </div>
+              </div>
 
-                    </article>
 
-                </div>
-             
-            </div>
-        </section>
+              <div class="bg-white rounded-xl shadow p-4" data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom">
+                  <button onclick="toggleAnswer(4)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                  ¿Qué cubre la garantía?
+                  <span id="icon-4">+</span>
+                  </button>
+                  <div id="answer-4" class="mt-2 text-gray-600 hidden">
+                      Cubre solo cambios menores a los requerimientos del cliente en la informacion de contacto, como cambios en 
+                      el nombre o dirección de correo electrónico y entre otros (30 días).<br>
+                      No incluye cambios en el diseño o funcionalidad del sitio web. <br><br>
+              
+                  </div>
+              </div>
+
+
+              <div class="bg-white rounded-xl shadow p-4" data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom">
+                  <button onclick="toggleAnswer(5)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                  ¿Tienes guia o manual de funcionamiento?
+                  <span id="icon-5">+</span>
+                  </button>
+                  <div id="answer-5" class="mt-2 text-gray-600 hidden">
+                      Si, se te entregará un video personalizado de tu proyecto explicando funcionalidadades y como utilizarlo.
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow p-4" data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom">
+                  <button onclick="toggleAnswer(6)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                  ¿Tengo que entregar información del texto, imágenes y contacto?
+                  <span id="icon-6">+</span>
+                  </button>
+                  <div id="answer-6" class="mt-2 text-gray-600 hidden">
+                      Si, tienes que entregar la información de texto, imágenes, correo, redes sociales y todos los datos que crees conveniente para tu proyecto.
+                      Si no envias la información dentro del tiempo establecido del proyecto, se te entregará el proyecto con información predeterminada para que luego tu mismo lo personalizarlo.
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow p-4" data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom">
+                  <button onclick="toggleAnswer(7)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
+                  ¿Tengo que entregar información del texto, imágenes y contacto?
+                  <span id="icon-7">+</span>
+                  </button>
+                  <div id="answer-7" class="mt-2 text-gray-600 hidden">
+                      Si, tienes que entregar la información de texto, imágenes, correo, redes sociales y todos los datos que crees conveniente para tu proyecto.
+                      Si no envias la información dentro del tiempo establecido del proyecto, se te entregará el proyecto con información predeterminada para que luego tu mismo lo personalizarlo.
+                  </div>
+              </div>
+
+      </div>
+  </section>
+
+    <!--Sección de Contacto-->
+
+    <section class="flex flex-col items-centert text-center font-Monserrat mt-20">
+      <span class="font-MonserratExtraBold text-4xl uppercase">Ponte en Contacto</span>
+      <span class=" text-2xl font-MonserratRegular text-[#5A5A5A] mt-10">¿Tienes un proyecto en mente? <br>
+          Contáctame y conversemos sobre cómo puedo ayudarte a hacerlo realidad.</span>
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 p-5 gap-5 mt-10">
+
+              <!-- Información de contacto -->
+              <div class="border-4 border-black font-MonserratRegular rounded-2xl text-start p-8 space-y-8 lg:w-[375px]" data-aos="fade-up">
+                <h2 class="text-2xl font-bold">Información de contacto</h2>
           
-        <!--Sección de Preguntas Frecuentes-->
-        <section class="mt-40 bg-amber-300 flex flex-col lg:flex-row p-5  gap-5 lg:px-32">
-            <div>
-                <span class="font-extrabold  font-Monserrat uppercase text-5xl">Preguntas Frecuentes</span>
-                <p class="text-2xl font-Monserrat font-medium text-[#5A5A5A] mt-10 text-center lg:w-lvh">
-                    "¿Tienes alguna pregunta? ¡No dudes en contactarme!"
-                </p>  
-                <img src="./assets/images/preguntas.png" width="400px" alt="Preguntas images">              
-            </div>
-            <div class=" w-full flex flex-col gap-3 font-Monserrat">
-
-
-                <div class="bg-white rounded-xl shadow p-4">
-                    <button onclick="toggleAnswer(1)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
-                        ¿Cuál es la Modalidad de pago?
-                      <span id="icon-1">+</span>
-                    </button>
-                    <div id="answer-1" class="mt-2 text-gray-600 hidden">
-                        Una vez firmado el contrato y para iniciar el trabajo Se paga el 50% al iniciar y el 50% restante al finalizar. <br><br>
-                        <span class=" mt-5">Transferencia bancaria | Paypal | Yape/Plin</span>
-
-                    </div>
+                <div class="flex items-start space-x-4">
+                  <div class="w-12 h-12 rounded-md bg-green-400 flex justify-center items-center"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></div>
+                  <div>
+                    <p class="font-bold">Email</p>
+                    <a href="mailto:kcm.smart@gmail.com" class="text-gray-600 font-semibold">kcm.smart@gmail.com</a>
                   </div>
-
-                    <div class="bg-white rounded-xl shadow p-4">
-                        <button onclick="toggleAnswer(2)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
-                        ¿Cuánto tiempo se demora en hacer el proyecto?
-                        <span id="icon-2">+</span>
-                        </button>
-                        <div id="answer-2" class="mt-2 text-gray-600 hidden">
-                            Para todos los proyectos se demora entre 7 y 10 días habiles. <br><br>
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white rounded-xl shadow p-4">
-                        <button onclick="toggleAnswer(3)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
-                        ¿Puedo Solicitar devolución de mi dinero?
-                        <span id="icon-3">+</span>
-                        </button>
-                        <div id="answer-3" class="mt-2 text-gray-600 hidden">
-                            Si, siempre y cuando sea por el 50% del pago inicial. Pero se te cobra una penalidad de 50% del total del pago inicial. <br><br>
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white rounded-xl shadow p-4">
-                        <button onclick="toggleAnswer(4)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
-                        ¿Qué cubre la garantía?
-                        <span id="icon-4">+</span>
-                        </button>
-                        <div id="answer-4" class="mt-2 text-gray-600 hidden">
-                            Cubre solo cambios menores a los requerimientos del cliente en la informacion de contacto, como cambios en 
-                            el nombre o dirección de correo electrónico y entre otros (30 días).<br>
-                            No incluye cambios en el diseño o funcionalidad del sitio web. <br><br>
-                    
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white rounded-xl shadow p-4">
-                        <button onclick="toggleAnswer(5)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
-                        ¿Tienes guia o manual de funcionamiento?
-                        <span id="icon-5">+</span>
-                        </button>
-                        <div id="answer-5" class="mt-2 text-gray-600 hidden">
-                            Si, se te entregará un video personalizado de tu proyecto explicando funcionalidadades y como utilizarlo.
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow p-4">
-                        <button onclick="toggleAnswer(6)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
-                        ¿Tengo que entregar información del texto, imágenes y contacto?
-                        <span id="icon-6">+</span>
-                        </button>
-                        <div id="answer-6" class="mt-2 text-gray-600 hidden">
-                            Si, tienes que entregar la información de texto, imágenes, correo, redes sociales y todos los datos que crees conveniente para tu proyecto.
-                            Si no envias la información dentro del tiempo establecido del proyecto, se te entregará el proyecto con información predeterminada para que luego tu mismo lo personalizarlo.
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow p-4">
-                        <button onclick="toggleAnswer(7)" class="flex justify-between w-full text-left text-lg font-medium text-gray-800">
-                        ¿Tengo que entregar información del texto, imágenes y contacto?
-                        <span id="icon-7">+</span>
-                        </button>
-                        <div id="answer-7" class="mt-2 text-gray-600 hidden">
-                            Si, tienes que entregar la información de texto, imágenes, correo, redes sociales y todos los datos que crees conveniente para tu proyecto.
-                            Si no envias la información dentro del tiempo establecido del proyecto, se te entregará el proyecto con información predeterminada para que luego tu mismo lo personalizarlo.
-                        </div>
-                    </div>
-
+                </div>
+          
+                <div class="flex items-start space-x-4">
+                  <div class="w-12 h-12 rounded-md bg-green-400 flex justify-center items-center"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></div>
+                  <div>
+                    <p class="font-bold">Whatsapp</p>
+                    <p class="text-gray-600 font-semibold">+51 987 654 321</p>
+                  </div>
+                </div>
+          
+                <div class="flex items-start space-x-4">
+                  <div class="w-12 h-12 rounded-md bg-green-400 flex justify-center items-center"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></div>
+                  <div>
+                    <p class="font-bold">Ubicación</p>
+                    <p class="text-gray-600 font-semibold">Lima, Perú</p>
+                  </div>
+                </div>
+          
+                <div>
+                  <p class="font-bold">Sígueme En</p>
+                  <div class="flex space-x-4 mt-2">
+                    <a href="#" class="w-14 h-14 rounded-full bg-black flex justify-center items-center"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                    <a href="#" class="w-14 h-14 rounded-full bg-black flex justify-center items-center"><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i></a>
+                    <a href="#" class="w-14 h-14 rounded-full bg-black flex justify-center items-center"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Formulario -->
+              <div class="mt-10 font-MonserratRegular" data-aos="fade-up">
+                <h2 class="text-2xl font-bold mb-6 text-center lg:text-start">Envíame Un Mensaje</h2>
+          
+                <form class="w-full space-y-6 mt-10">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <input type="text" placeholder="Nombre" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
+                    <input type="email" placeholder="Email" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
+                  </div>
+          
+                  <input type="text" placeholder="Asunto" class="w-full border-b-4 border-black  border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
+          
+                  <textarea placeholder="Mensaje" rows="5" class="w-full border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none resize-none"></textarea>
+          
+                  <button type="submit" class="w-full bg-black text-white font-bold py-3 rounded-md hover:bg-gray-800 mt-5 lg:mt-10 cursor-pointer">ENVIAR</button>
+                </form>
+              </div>
             </div>
-        </section>
-        <!--Sección de Contacto-->
-        <section class="flex flex-col items-centert text-center font-Monserrat mt-20">
-            <span class="font-extrabold text-5xl uppercase">Ponte en Contacto</span>
-            <span class=" text-2xl font-normal mt-20">¿Tienes un proyecto en mente? <br>
-                Contáctame y conversemos sobre cómo puedo ayudarte a hacerlo realidad.</span>
-                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 p-5 gap-5">
+  </section>
     
-                    <!-- Información de contacto -->
-                    <div class="border-4 border-black rounded-2xl text-start p-8 space-y-8 lg:w-[375px]">
-                      <h2 class="text-2xl font-bold">Información de contacto</h2>
-                
-                      <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-md bg-green-400"></div>
-                        <div>
-                          <p class="font-bold">Email</p>
-                          <p class="text-gray-600 font-semibold">contacto@kenercotrina.com</p>
-                        </div>
-                      </div>
-                
-                      <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-md bg-green-400"></div>
-                        <div>
-                          <p class="font-bold">Teléfono</p>
-                          <p class="text-gray-600 font-semibold">+51 987 654 321</p>
-                        </div>
-                      </div>
-                
-                      <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 rounded-md bg-green-400"></div>
-                        <div>
-                          <p class="font-bold">Ubicación</p>
-                          <p class="text-gray-600 font-semibold">Lima, Perú</p>
-                        </div>
-                      </div>
-                
-                      <div>
-                        <p class="font-bold">Sígueme En</p>
-                        <div class="flex space-x-4 mt-2">
-                          <div class="w-14 h-14 rounded-full bg-black"></div>
-                          <div class="w-14 h-14 rounded-full bg-black"></div>
-                          <div class="w-14 h-14 rounded-full bg-black"></div>
-                        </div>
-                      </div>
-                    </div>
-                
-                    <!-- Formulario -->
-                    <div class="mt-10">
-                      <h2 class="text-2xl font-bold mb-6">Envíame Un Mensaje</h2>
-                
-                      <form class="w-full space-y-6 mt-10">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                          <input type="text" placeholder="Nombre" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
-                          <input type="email" placeholder="Email" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
-                        </div>
-                
-                        <input type="text" placeholder="Asunto" class="w-full border-b-4 border-black  border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
-                
-                        <textarea placeholder="Mensaje" rows="5" class="w-full border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none resize-none"></textarea>
-                
-                        <button type="submit" class="w-full bg-black text-white font-bold py-3 rounded-md hover:bg-gray-800 mt-5 lg:mt-10">ENVIAR</button>
-                      </form>
-                    </div>
-                  </div>
-        </section>
-        
-    </main>
-    <footer class="w-full p-4 font-Monserrat text-md font-extrabold bg-black text-white text-center uppercase lg:text-lg">
-        <p>© 2025 KCMSMART. Todos los derechos reservados.</p>
-    </footer>
-    <script src="/assets/js/script.js"></script>
+  </main>
+  <footer class="w-full p-4 font-MonserratExtraBold text-md font-extrabold bg-black text-white text-center uppercase lg:text-lg">
+    <p>© 2025 KCMSMART. Todos los derechos reservados.</p>
+</footer>
+<script src="/assets/js/script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
 

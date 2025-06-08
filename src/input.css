@@ -1,8 +1,38 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
-@theme{
-    --font-Monserrat: 'Montserrat', sans-serif;
-    --font-Boldonse: 'Boldonse', sans-serif;
 
+@font-face {
+    font-family: 'Boldonse';
+    src: url('./assets/fonts/Boldonse.ttf');
+}
+
+@font-face {
+    font-family: 'CalSans';
+    src: url('./assets/fonts/CalSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'MonserratExtraBold';
+    src: url("./assets/fonts/Montserrat-ExtraBold.ttf");
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'MonserratRegular';
+    src: url('./assets/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'MonserratThin';
+    src: url("./assets/fonts/Montserrat-Thin.ttf");
+}
+@font-face {
+    font-family: 'MonserratLight';
+    src: url('./assets/fonts/Montserrat-Light.ttf');
+}
+
+@theme{
+    --font-MonserratExtraBold: 'MonserratExtraBold', sans-serif;
+    --font-MonserratRegular: 'MonserratRegular', sans-serif;
+    --font-MonserratThin: 'MonserratThin', sans-serif;
+    --font-MonserratLight: 'MonserratLight', sans-serif;
+    --font-CalSans: 'CalSans', sans-serif;
+    --font-Boldonse: 'Boldonse', sans-serif;  
 }
