@@ -8,7 +8,12 @@
     <script src="https://kit.fontawesome.com/8c2f1b82d6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
 </head>
 <body>
 
@@ -47,13 +52,13 @@
           <div class="w-full flex flex-row items-center justify-center text-white text-5xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-9xl mt-10">
             <span id="typed" class="font-Boldonse"></span>
           </div>
-          <h1 class="w-full font-MonserratRegular text-[1.2em] lg:text-[1.5em] mt-6 text-black/60 text-center p-5 lg:w-[800px]">
+          <h1 class="w-full font-MonserratRegular text-[1em] lg:text-[1.3em] mt-6 text-black/60 text-center p-5 lg:w-[800px]">
             Hacemos sitios web, landing pages,
             tienda online con diseños modernos y funcionales.Transformos tus ideas en experiencias web únicas y personalizadas que destacan en el mundo digital.
           </h1>
       
           <!-- Botones -->
-          <div class="mt-5 w-full flex flex-col lg:flex-row items-center justify-center gap-6">
+          <div class="mt-5 w-full flex flex-col md:flex-row lg:flex-row items-center justify-center gap-6">
             <a href="#Portafolio"
                class="transform transition duration-300 ease-in-out hover:scale-105 border-4 border-black
                       text-white bg-black hover:bg-white hover:text-black hover:border-white
@@ -72,14 +77,14 @@
     
 
     <!--Sección de Sobre mi-->
-    <section class="w-full bg-black flex flex-col-reverse p-5 gap-20 md:lg:px-32 lg:flex-row lg:px-64 lg:py-32  mb-10 lg:mb-0 rounded-bl-3xl rounded-br-3xl">
+    <section id="Sobremi" class="w-full bg-black flex flex-col-reverse p-5 gap-20 md:lg:px-32 lg:flex-row lg:px-64 lg:py-32  mb-10 lg:mb-0 rounded-bl-3xl rounded-br-3xl">
       <div class="w-full flex justify-center mb-10 lg:mb-5" data-aos="fade-up">
           <img src="./assets/images/5800.jpg"  alt="sobre mi" class=" rounded-[64px] lg:w-[498px]">
 
       </div>
       <div class="w-full flex flex-col text-white text-justify mt-10" data-aos="fade-up">
           <span class="font-MonserratExtraBold text-5xl">SOBRE MI</span>
-          <p class="text-[1.2em] lg:text-[1.3em] font-MonserratRegular mt-5">¡Hola! Soy <strong>Kener</strong>, un apasionado diseñador web con una sólida trayectoria en la creación de experiencias 
+          <p class="font-MonserratRegular text-[1em] lg:text-[1.3em] mt-5 text-white/70">¡Hola! Soy <strong>Kener</strong>, un apasionado diseñador web con una sólida trayectoria en la creación de experiencias 
               digitales impactantes. Mi enfoque se centra en la fusión de creatividad y tecnología para transformar 
               ideas en soluciones visualmente atractivas y funcionales.
           </p>
@@ -114,7 +119,7 @@
     </section>
 
    <!--Sección de Servicios-->
-    <section class="w-full bg-white flex flex-col justify-center items-center px-5  lg:px-32">
+    <section id="Servicios" class="w-full bg-white flex flex-col justify-center items-center px-5  lg:px-32">
     <span class="font-extrabold  font-MonserratExtraBold text-5xl mt-30">SERVICIO</span>
     <p class="text-2xl font-MonserratRegular text-[#5A5A5A] mt-10 text-center lg:w-lvh">
         "Cuenta conmigo para dar vida a tu proyecto. Revisa los servicios que ofrezco y sus precios."
@@ -123,7 +128,7 @@
     <div class="w-full mt-15 flex flex-wrap  justify-center items-center md:flex-col lg:flex-row gap-8">
        
         <!-- Landing Page -->
-        <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-110" data-aos="fade-up">
+        <article class="w-[396px] h-[655px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-110" data-aos="fade-up">
 
           
             <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
@@ -135,7 +140,7 @@
             </div>
           
            
-            <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
+            <div class="w-full h-[465px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
               <div class="flex flex-col gap-2 font-MonserratLight">
                 <span>Diseño personalizado</span>
                 <span>Diseño Responsive</span>
@@ -148,7 +153,7 @@
                 <span>30 Días de garantía y mantención</span>
               </div>
           
-              <button
+              <button href="https://wa.me/51932689884?text=Hola%estoy%interesado%en%hacer%una%landing%page"
                 type="button"
                 class="bg-black text-white font-CalSans text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
               >
@@ -158,7 +163,7 @@
         </article>
 
         <!-- Sitio Web -->
-        <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-110" data-aos="fade-up">
+        <article class="w-[396px] h-[680px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-1000 hover:scale-110" data-aos="fade-up">
 
           
             <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
@@ -170,7 +175,7 @@
             </div>
           
            
-            <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
+            <div class="w-full h-[490px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
               <div class="flex flex-col gap-2 font-MonserratLight">
                 <span>Sitios web estáticos</span>
                 <span>Diseño Responsive</span>
@@ -183,7 +188,7 @@
                 <span>30 Días de garantía y mantención</span>
               </div>
           
-              <button
+              <button href="https://wa.me/51932689884?text=Hola%estoy%interesado%en%hacer%un%sitio%web"
                 type="button"
                 class="bg-black text-white font-CalSans text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
               >
@@ -192,7 +197,7 @@
             </div>
         </article>
           <!--Tienda Online -->
-        <article class="w-[396px] h-[645px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-110" data-aos="fade-up">
+        <article class="w-[396px] h-[655px] border-4 border-black rounded-3xl overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-110" data-aos="fade-up">
 
           
             <div class="w-full h-[190px] bg-white flex items-start justify-center flex-col gap-4 px-10 py-5 text-black">
@@ -204,7 +209,7 @@
             </div>
           
            
-            <div class="w-full h-[455px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
+            <div class="w-full h-[465px] bg-[#18F29B] flex flex-col justify-between items-center font-Monserrat font-light text-lg text-center text-black px-6 py-5 rounded-tl-3xl rounded-tr-3xl">
               <div class="flex flex-col gap-2 font-MonserratLight">
                 <span>Diseño personalizado y Responsive</span>
                 <span>Ingreso  de 30 productos</span>
@@ -217,7 +222,7 @@
                 <span>30 Días de garantía y mantención</span>
               </div>
           
-              <button
+              <button href="https://wa.me/51932689884?text=Hola%estoy%interesado%en%hacer%una%tienda%online"
                 type="button"
                 class="bg-black text-white font-CalSans text-2xl w-[285px] h-[60px] rounded-2xl cursor-pointer mt-6"
               >
@@ -230,7 +235,7 @@
 
     <!--Sección de Portafolio-->
 
-    <section class="w-full bg-white p-5 mt-30 flex flex-col justify-center items-center">
+    <section id="Portafolio"  class="w-full bg-white p-5 mt-30 flex flex-col justify-center items-center">
       <span class="font-MonserratExtraBold text-5xl">PORTAFOLIO</span>
       <p class="text-2xl font-MonserratRegular text-[#5A5A5A] mt-10 text-center lg:w-lvh">
         Estos son algunos de mis proyectos más destacados.
@@ -240,14 +245,18 @@
 
       <!--Proyecto 1-->
       <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl rounded-3xl p-2" data-aos="fade-up">
-        <div class="flex justify-center p-1">
-            <img src="" alt="Portafolio image" class="bg-black w-[150px] h-[200px]">
+        <div class="flex justify-center items-center p-1">
+            <img src="./assets/images/img-peso.png" alt="Portafolio image" class="w-[150px] h-[150px] object-contain">
         </div>
         <div class="w-full flex flex-col justify-between items-center text-center p-2 " data-aos="fade-right">
           <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Calculadora de Masa Corporal</span>
             <span class="font-CalSans font-normal text-[14px] text-black/70 lg:text-md">Es una página web que te permite saber su peso ideal seleccionando tu  sexo y altura</span>
             <span class="font-MonserratLight text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
-            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-3xl  hover:bg-black hover:text-white cursor-pointer">Ver</button>  
+            <a href="https://kcmsmartdev.github.io/tupesoideal/" target="_blank">
+              <button type="button" class="w-[223px] h-[45px] bg-[#18F29B]  font-Monserrat font-bold rounded-3xl  hover:bg-black hover:text-white cursor-pointer">
+                Ver
+              </button>
+            </a>  
         </div>
 
       </article>
@@ -255,13 +264,19 @@
       <!--Proyecto 2-->
       <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl rounded-3xl p-2" data-aos="fade-up">
         <div class="flex justify-center p-1">
-            <img src="" alt="Portafolio image" class="bg-black w-[150px]">
+            <img src="./assets/images/img-viajes.png" alt="Portafolio image" class="w-[150px] h-[150px] object-contain">
         </div>
         <div class="w-full flex flex-col justify-between items-center text-center p-2 ">
           <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Blog Viajes</span>
             <span class="font-CalSans font-normal text-[14px] text-black/70 lg:text-md">Un blog ideal para viajes donde podrás compartir tus aventuras y anecdotas. </span>
             <span class="font-MonserratLight text-[14px]">WORDPRESS</span>
-            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-3xl  hover:bg-black hover:text-white cursor-pointer">Ver</button>  
+            
+              <a href="#" target="_blank">
+                <button type="button" class="w-[223px] h-[45px] bg-[#18F29B]  font-Monserrat font-bold rounded-3xl  hover:bg-black hover:text-white cursor-pointer">
+                  Ver
+                </button>
+              </a>
+             
         </div>
 
       </article>
@@ -269,14 +284,18 @@
 
       <!--Proyecto 3-->
       <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl rounded-3xl p-2" data-aos="fade-up">
-        <div class="flex justify-center p-1">
-            <img src="" alt="Portafolio image" class="bg-black w-[150px]">
+        <div class="flex justify-center items-center p-1">
+            <img src="./assets/images/img-fotografo.png" class="w-[150px] h-[150px] object-contain" alt="Portafolio image">
         </div>
         <div class="w-full flex flex-col justify-between items-center text-center p-2 ">
           <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">Landing Page de Fotógrafo</span>
             <span class="font-CalSans font-normal text-[14px] text-black/70 lg:text-md">Su principal función es mostrar el trabajo y obtener clientes que te escribiran a whatsapp para un contacto más directo.</span>
             <span class="font-MonserratLight text-[14px]">HTML  | TAILWIND | JAVASCRIPT</span>
-            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-3xl hover:bg-black hover:text-white cursor-pointer">Ver</button>  
+            <a href="#" target="_blank">
+              <button type="button" class="w-[223px] h-[45px] bg-[#18F29B]  font-Monserrat font-bold rounded-3xl  hover:bg-black hover:text-white cursor-pointer">
+                Ver
+              </button>
+            </a> 
         </div>
 
       </article>
@@ -285,14 +304,18 @@
 
       <!--Proyecto 4-->
       <article class="w-full h-[231px] border-4 flex flex-row gap-3 lg:w-[540px] shadow-2xl rounded-3xl p-2" data-aos="fade-up">
-        <div class="flex justify-center p-1">
-            <img src="" alt="Portafolio image" class="bg-black w-[150px]">
+        <div class="flex justify-center items-center p-1">
+            <img src="./assets/images/img-redes.png" alt="Portafolio image" class="w-[150px] h-[150px] object-contain">
         </div>
         <div class="w-full flex flex-col justify-between items-center text-center p-2 ">
           <span class="font-Boldonse text-[0.8em] lg:text-[0.9em]">E-commerce Follow Tiktok</span>
             <span class="font-CalSans font-normal text-[14px] text-black/70 lg:text-md">Es una tienda online para aumentar seguidores en la red social de tiktok. Tiene incorporado medio de pago. </span>
             <span class="font-MonserratLight text-[14px]">WORDPRESS | WOOCOMMERCE </span>
-            <button type="button" class="w-[223px] h-[45px] bg-[#1FF29E]  font-Monserrat font-bold rounded-3xl hover:bg-black hover:text-white cursor-pointer">Ver</button>  
+            <a href="#" target="_blank">
+              <button type="button" class="w-[223px] h-[45px] bg-[#18F29B]  font-Monserrat font-bold rounded-3xl  hover:bg-black hover:text-white cursor-pointer">
+                Ver
+              </button>
+            </a>  
         </div>
       </article>
     </div>
@@ -404,7 +427,7 @@
 
     <!--Sección de Contacto-->
 
-    <section class="flex flex-col items-centert text-center font-Monserrat mt-20">
+    <section id="Contacto" class="flex flex-col items-centert text-center font-Monserrat mt-20">
       <span class="font-MonserratExtraBold text-4xl uppercase">Ponte en Contacto</span>
       <span class=" text-2xl font-MonserratRegular text-[#5A5A5A] mt-10">¿Tienes un proyecto en mente? <br>
           Contáctame y conversemos sobre cómo puedo ayudarte a hacerlo realidad.</span>
@@ -418,7 +441,7 @@
                   <div class="w-12 h-12 rounded-md bg-green-400 flex justify-center items-center"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></div>
                   <div>
                     <p class="font-bold">Email</p>
-                    <a href="mailto:kcm.smart@gmail.com" class="text-gray-600 font-semibold">kcm.smart@gmail.com</a>
+                    <a href="mailto:kcm.smart@gmail.com" target="_blank" class="text-gray-600 font-semibold">kcm.smart@gmail.com</a>
                   </div>
                 </div>
           
@@ -426,7 +449,7 @@
                   <div class="w-12 h-12 rounded-md bg-green-400 flex justify-center items-center"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></div>
                   <div>
                     <p class="font-bold">Whatsapp</p>
-                    <p class="text-gray-600 font-semibold">+51 987 654 321</p>
+                    <p class="text-gray-600 font-semibold"><a href="https://wa.me/51932689884" target="_blank">+51 987 654 321</a></p>
                   </div>
                 </div>
           
@@ -453,7 +476,7 @@
                 <h2 class="text-2xl font-bold mb-6 text-center lg:text-start">Envíame Un Mensaje</h2>
           
                 <form class="w-full space-y-6 mt-10">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-15">
                     <input type="text" placeholder="Nombre" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
                     <input type="email" placeholder="Email" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
                   </div>
@@ -469,7 +492,7 @@
   </section>
     
   </main>
-  <footer class="w-full p-4 font-MonserratExtraBold text-md font-extrabold bg-black text-white text-center uppercase lg:text-lg">
+  <footer class="w-full p-4 font-MonserratExtraBold text-sm font-extrabold bg-black text-white text-center lg:text-lg">
     <p>© 2025 KCMSMART. Todos los derechos reservados.</p>
 </footer>
 <script src="./assets/js/script.js"></script>
