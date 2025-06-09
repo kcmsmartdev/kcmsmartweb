@@ -478,15 +478,15 @@
               <div class="mt-10 font-MonserratRegular" data-aos="fade-up">
                 <h2 class="text-2xl font-bold mb-6 text-center lg:text-start">Envíame Un Mensaje</h2>
           
-                <form class="w-full space-y-6 mt-10">
+                <form class="w-full space-y-6 mt-10" action="https://formsubmit.co/kcm.smart@gmail.com" method="POST">
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-15">
-                    <input type="text" placeholder="Nombre" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
-                    <input type="email" placeholder="Email" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
+                    <input type="text" name="name" placeholder="Nombre" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none required">
+                    <input type="email" name="email" placeholder="Email" class="border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none required">
                   </div>
           
-                  <input type="text" placeholder="Asunto" class="w-full border-b-4 border-black  border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none">
+                  <input type="text" name="subject" placeholder="Asunto" class="w-full border-b-4 border-black  border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none required">
           
-                  <textarea placeholder="Mensaje" rows="5" class="w-full border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none resize-none"></textarea>
+                  <textarea name="message" placeholder="Mensaje" rows="5" class="w-full border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none resize-none required"></textarea>
           
                   <button type="submit" class="w-full bg-black text-white font-bold py-3 rounded-md hover:bg-gray-800 mt-5 lg:mt-10 cursor-pointer">ENVIAR</button>
                 </form>
