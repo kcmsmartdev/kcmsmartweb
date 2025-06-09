@@ -487,8 +487,8 @@
                   <input type="text" name="subject" placeholder="Asunto" class="w-full border-b-4 border-black  border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none required">
           
                   <textarea name="message" placeholder="Mensaje" rows="5" class="w-full border-b-4 border-black border-l-4 py-2 px-4 rounded-br-2xl focus:outline-none resize-none required"></textarea>
-          
-                  <button type="submit" class="w-full bg-black text-white font-bold py-3 rounded-md hover:bg-gray-800 mt-5 lg:mt-10 cursor-pointer">ENVIAR</button>
+                  <input type="hidden" name="_next" value="https://musical-dango-8ddd17.netlify.app">
+                  <button onclick="btnMensajeEnviado" type="submit" class="w-full bg-black text-white font-bold py-3 rounded-md hover:bg-gray-800 mt-5 lg:mt-10 cursor-pointer">ENVIAR</button>
                 </form>
               </div>
             </div>

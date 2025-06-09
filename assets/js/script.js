@@ -20,5 +20,7 @@ new Typed("#typed", {
     }
   }
 
-
+function btnMensajeEnviado(){
+  alert("Mensaje enviado con éxito");
+}
   
