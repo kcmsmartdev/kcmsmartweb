@@ -1,5 +1,6 @@
 new Typed("#typed", {
-    strings: ["páginas web", "landing pages", "blogs", "tiendas online"],
+    FontFace: "Boldonse",
+    strings: ["Página web", "Landing page", "Blog", "Tienda online"],
     typeSpeed: 50,
     backSpeed: 25,
     loop: true,
