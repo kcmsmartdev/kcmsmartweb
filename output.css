@@ -276,8 +276,14 @@
   .h-\[45px\] {
     height: 45px;
   }
+  .h-\[50px\] {
+    height: 50px;
+  }
   .h-\[60px\] {
     height: 60px;
+  }
+  .h-\[100px\] {
+    height: 100px;
   }
   .h-\[150px\] {
     height: 150px;
@@ -288,11 +294,20 @@
   .h-\[231px\] {
     height: 231px;
   }
+  .h-\[300px\] {
+    height: 300px;
+  }
+  .h-\[400px\] {
+    height: 400px;
+  }
   .h-\[465px\] {
     height: 465px;
   }
   .h-\[490px\] {
     height: 490px;
+  }
+  .h-\[500px\] {
+    height: 500px;
   }
   .h-\[655px\] {
     height: 655px;
@@ -312,6 +327,12 @@
   .w-14 {
     width: calc(var(--spacing) * 14);
   }
+  .w-\[50px\] {
+    width: 50px;
+  }
+  .w-\[100px\] {
+    width: 100px;
+  }
   .w-\[130px\] {
     width: 130px;
   }
@@ -324,8 +345,17 @@
   .w-\[285px\] {
     width: 285px;
   }
+  .w-\[300px\] {
+    width: 300px;
+  }
   .w-\[396px\] {
     width: 396px;
+  }
+  .w-\[400px\] {
+    width: 400px;
+  }
+  .w-\[500px\] {
+    width: 500px;
   }
   .w-full {
     width: 100%;
@@ -432,6 +462,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -440,6 +473,12 @@
   }
   .rounded-\[64px\] {
     border-radius: 64px;
+  }
+  .rounded-\[100\] {
+    border-radius: 100;
+  }
+  .rounded-\[100px\] {
+    border-radius: 100px;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -510,6 +549,9 @@
   }
   .object-contain {
     object-fit: contain;
+  }
+  .object-cover {
+    object-fit: cover;
   }
   .p-1 {
     padding: calc(var(--spacing) * 1);
@@ -873,6 +915,11 @@
       display: none;
     }
   }
+  .lg\:h-full {
+    @media (width >= 64rem) {
+      height: 100%;
+    }
+  }
   .lg\:w-\[375px\] {
     @media (width >= 64rem) {
       width: 375px;
@@ -898,6 +945,11 @@
       width: 1000px;
     }
   }
+  .lg\:w-full {
+    @media (width >= 64rem) {
+      width: 100%;
+    }
+  }
   .lg\:w-lvh {
     @media (width >= 64rem) {
       width: 100lvh;
@@ -916,6 +968,11 @@
   .lg\:justify-evenly {
     @media (width >= 64rem) {
       justify-content: space-evenly;
+    }
+  }
+  .lg\:rounded-\[64px\] {
+    @media (width >= 64rem) {
+      border-radius: 64px;
     }
   }
   .lg\:bg-gray-800 {
