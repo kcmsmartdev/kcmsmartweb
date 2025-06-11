@@ -276,9 +276,6 @@
   .h-\[45px\] {
     height: 45px;
   }
-  .h-\[50px\] {
-    height: 50px;
-  }
   .h-\[60px\] {
     height: 60px;
   }
@@ -291,23 +288,26 @@
   .h-\[190px\] {
     height: 190px;
   }
+  .h-\[200px\] {
+    height: 200px;
+  }
+  .h-\[220px\] {
+    height: 220px;
+  }
   .h-\[231px\] {
     height: 231px;
   }
+  .h-\[250px\] {
+    height: 250px;
+  }
   .h-\[300px\] {
     height: 300px;
-  }
-  .h-\[400px\] {
-    height: 400px;
   }
   .h-\[465px\] {
     height: 465px;
   }
   .h-\[490px\] {
     height: 490px;
-  }
-  .h-\[500px\] {
-    height: 500px;
   }
   .h-\[655px\] {
     height: 655px;
@@ -321,20 +321,11 @@
   .h-screen {
     height: 100vh;
   }
-  .min-h-\[3em\] {
-    min-height: 3em;
-  }
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
   .w-14 {
     width: calc(var(--spacing) * 14);
-  }
-  .w-\[50px\] {
-    width: 50px;
-  }
-  .w-\[100px\] {
-    width: 100px;
   }
   .w-\[130px\] {
     width: 130px;
@@ -353,12 +344,6 @@
   }
   .w-\[396px\] {
     width: 396px;
-  }
-  .w-\[400px\] {
-    width: 400px;
-  }
-  .w-\[500px\] {
-    width: 500px;
   }
   .w-full {
     width: 100%;
@@ -465,23 +450,11 @@
   .overflow-hidden {
     overflow: hidden;
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
   .rounded-3xl {
     border-radius: var(--radius-3xl);
-  }
-  .rounded-\[64px\] {
-    border-radius: 64px;
-  }
-  .rounded-\[100\] {
-    border-radius: 100;
-  }
-  .rounded-\[100px\] {
-    border-radius: 100px;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -716,9 +689,6 @@
       color: color-mix(in oklab, var(--color-black) 70%, transparent);
     }
   }
-  .text-gray-400 {
-    color: var(--color-gray-400);
-  }
   .text-gray-600 {
     color: var(--color-gray-600);
   }
@@ -918,6 +888,11 @@
       display: none;
     }
   }
+  .lg\:h-\[220px\] {
+    @media (width >= 64rem) {
+      height: 220px;
+    }
+  }
   .lg\:h-full {
     @media (width >= 64rem) {
       height: 100%;
@@ -926,11 +901,6 @@
   .lg\:w-\[375px\] {
     @media (width >= 64rem) {
       width: 375px;
-    }
-  }
-  .lg\:w-\[498px\] {
-    @media (width >= 64rem) {
-      width: 498px;
     }
   }
   .lg\:w-\[540px\] {
