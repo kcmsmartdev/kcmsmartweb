@@ -1,5 +1,4 @@
-new Typed("#typed", {
-    FontFace: "Boldonse",
+new Typed("#typed", { 
     strings: ["Página web", "Landing page", "Blog", "Tienda online"],
     typeSpeed: 3,
     backSpeed: 25,
