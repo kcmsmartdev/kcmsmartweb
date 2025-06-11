@@ -3,6 +3,8 @@ new Typed("#typed", {
     strings: ["Página web", "Landing page", "Blog", "Tienda online"],
     typeSpeed: 5,
     backSpeed: 25,
+    smartBackspace: true,
+  showCursor: false,
     loop: true,
   });
 
