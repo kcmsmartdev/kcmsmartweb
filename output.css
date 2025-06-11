@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
@@ -52,7 +53,6 @@
     --default-mono-font-family: var(--font-mono);
     --font-MonserratExtraBold: 'MonserratExtraBold', sans-serif;
     --font-MonserratRegular: 'MonserratRegular', sans-serif;
-    --font-MonserratThin: 'MonserratThin', sans-serif;
     --font-MonserratLight: 'MonserratLight', sans-serif;
     --font-CalSans: 'CalSans', sans-serif;
     --font-Boldonse: 'Boldonse', sans-serif;
@@ -469,10 +469,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
   .border-4 {
     border-style: var(--tw-border-style);
     border-width: 4px;
@@ -488,8 +484,8 @@
   .border-black {
     border-color: var(--color-black);
   }
-  .bg-\[\#1FF29E\]\/30 {
-    background-color: color-mix(in oklab, #1FF29E 30%, transparent);
+  .border-white {
+    border-color: var(--color-white);
   }
   .bg-\[\#18F29B\] {
     background-color: #18F29B;
@@ -497,26 +493,8 @@
   .bg-\[\#18F29b\] {
     background-color: #18F29b;
   }
-  .bg-\[\#18F29b\]\/50 {
-    background-color: color-mix(in oklab, #18F29b 50%, transparent);
-  }
-  .bg-\[\#50ffbc\] {
-    background-color: #50ffbc;
-  }
-  .bg-\[\#64ffc4\] {
-    background-color: #64ffc4;
-  }
-  .bg-\[\#78ffcb\] {
-    background-color: #78ffcb;
-  }
   .bg-\[\#c9ffea\] {
     background-color: #c9ffea;
-  }
-  .bg-\[\#c9ffea\]\/30 {
-    background-color: color-mix(in oklab, #c9ffea 30%, transparent);
-  }
-  .bg-\[black\] {
-    background-color: black;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -692,6 +670,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       color: color-mix(in oklab, var(--color-black) 70%, transparent);
     }
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
   }
   .text-gray-600 {
     color: var(--color-gray-600);
@@ -937,11 +918,6 @@
       justify-content: space-evenly;
     }
   }
-  .lg\:bg-black {
-    @media (width >= 64rem) {
-      background-color: var(--color-black);
-    }
-  }
   .lg\:bg-gray-800 {
     @media (width >= 64rem) {
       background-color: var(--color-gray-800);
@@ -1000,11 +976,6 @@
       font-size: 1.3em;
     }
   }
-  .lg\:text-\[1em\] {
-    @media (width >= 64rem) {
-      font-size: 1em;
-    }
-  }
   .md\:lg\:px-32 {
     @media (width >= 48rem) {
       @media (width >= 64rem) {
@@ -1022,27 +993,33 @@
 @font-face {
   font-family: 'Boldonse';
   src: url('./assets/fonts/Boldonse.ttf');
+  font-display: swap;
 }
 @font-face {
   font-family: 'CalSans';
   src: url('./assets/fonts/CalSans-Regular.ttf');
+  font-display: swap;
 }
 @font-face {
   font-family: 'MonserratExtraBold';
   src: url("./assets/fonts/Montserrat-ExtraBold.ttf");
   font-weight: 800;
+  font-display: swap;
 }
 @font-face {
   font-family: 'MonserratRegular';
   src: url('./assets/fonts/Montserrat-Regular.ttf');
+  font-display: swap;
 }
 @font-face {
   font-family: 'MonserratThin';
   src: url("./assets/fonts/Montserrat-Thin.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: 'MonserratLight';
   src: url('./assets/fonts/Montserrat-Light.ttf');
+  font-display: swap;
 }
 @property --tw-rotate-x {
   syntax: "*";

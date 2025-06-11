@@ -3,29 +3,35 @@
 @font-face {
     font-family: 'Boldonse';
     src: url('./assets/fonts/Boldonse.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'CalSans';
     src: url('./assets/fonts/CalSans-Regular.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'MonserratExtraBold';
     src: url("./assets/fonts/Montserrat-ExtraBold.ttf");
     font-weight: 800;
+    font-display: swap;
 }
 @font-face {
     font-family: 'MonserratRegular';
     src: url('./assets/fonts/Montserrat-Regular.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'MonserratThin';
     src: url("./assets/fonts/Montserrat-Thin.ttf");
+    font-display: swap;
 }
 @font-face {
     font-family: 'MonserratLight';
     src: url('./assets/fonts/Montserrat-Light.ttf');
+    font-display: swap;
 }
 
 @theme{
