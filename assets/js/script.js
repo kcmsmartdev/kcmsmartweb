@@ -1,8 +1,9 @@
 new Typed("#typed", {
     FontFace: "Boldonse",
     strings: ["Página web", "Landing page", "Blog", "Tienda online"],
-    typeSpeed: 5,
+    typeSpeed: 3,
     backSpeed: 25,
+    backDelay: 5000,
     smartBackspace: true,
   showCursor: false,
     loop: true,
