@@ -469,9 +469,17 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-4 {
     border-style: var(--tw-border-style);
     border-width: 4px;
+  }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
   }
   .border-b-4 {
     border-bottom-style: var(--tw-border-style);
@@ -487,11 +495,35 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .border-b-black {
+    border-bottom-color: var(--color-black);
+  }
   .bg-\[\#1FF29E\]\/30 {
     background-color: color-mix(in oklab, #1FF29E 30%, transparent);
   }
   .bg-\[\#18F29B\] {
     background-color: #18F29B;
+  }
+  .bg-\[\#18F29b\] {
+    background-color: #18F29b;
+  }
+  .bg-\[\#18F29b\]\/50 {
+    background-color: color-mix(in oklab, #18F29b 50%, transparent);
+  }
+  .bg-\[\#18F29b\]\/70 {
+    background-color: color-mix(in oklab, #18F29b 70%, transparent);
+  }
+  .bg-\[\#18F\] {
+    background-color: #18F;
+  }
+  .bg-\[\#18\] {
+    background-color: #18;
+  }
+  .bg-\[\#\] {
+    background-color: #;
+  }
+  .bg-\[black\] {
+    background-color: black;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -726,6 +758,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .transition-transform {
     transition-property: transform, translate, scale, rotate;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -743,6 +780,19 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
+  .ease-initial {
+    --tw-ease: initial;
+  }
+  .hover\:scale-15 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 15%;
+        --tw-scale-y: 15%;
+        --tw-scale-z: 15%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
@@ -759,6 +809,16 @@
         --tw-scale-x: 110%;
         --tw-scale-y: 110%;
         --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:scale-115 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 115%;
+        --tw-scale-y: 115%;
+        --tw-scale-z: 115%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
       }
     }
@@ -795,6 +855,34 @@
     &:hover {
       @media (hover: hover) {
         font-family: var(--font-MonserratExtraBold);
+      }
+    }
+  }
+  .hover\:text-\[\#18F29B\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #18F29B;
+      }
+    }
+  }
+  .hover\:text-\[\#18\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #18;
+      }
+    }
+  }
+  .hover\:text-\[\#\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #;
+      }
+    }
+  }
+  .hover\:text-\[black\] {
+    &:hover {
+      @media (hover: hover) {
+        color: black;
       }
     }
   }
