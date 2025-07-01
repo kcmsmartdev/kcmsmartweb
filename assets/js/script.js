@@ -1,6 +1,6 @@
 new Typed("#typed", { 
-    strings: ["Página web", "Landing page", "Blog", "Tienda online"],
-    typeSpeed: 3,
+    strings: ["Sitio web", "Landing page", "Blog", "Tienda online"],
+    typeSpeed: 2,
     backSpeed: 25,
     backDelay: 5000,
     smartBackspace: true,
