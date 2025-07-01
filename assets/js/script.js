@@ -2,7 +2,7 @@ new Typed("#typed", {
     strings: ["Sitio web", "Landing page", "Blog", "Tienda online"],
     typeSpeed: 2,
     backSpeed: 25,
-    backDelay: 5000,
+    backDelay: 6000,
     smartBackspace: true,
   showCursor: false,
     loop: true,
